@@ -1,0 +1,65 @@
+.container-gemdam {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-container-gemdam {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-tittle {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.child-container-tittle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.child-container-tittle h1 {
+    font-size: 6em;
+    line-height: 1em;
+    color: #2cddcf;
+}
+
+.container-shader {
+    width: 50%;
+}
+
+.container-subtittle {
+    color: #2cddcf;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.container-subtittle p{
+    font-size: 0.7em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #2cddcf;
+}
+
+.container-subtittle div {
+    width: 50px;
+    height: 2px;
+    background: #2cddcf;
+}

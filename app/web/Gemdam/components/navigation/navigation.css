@@ -1,0 +1,152 @@
+/* ----------------------- */
+/* ----- LOGO */
+/* ----------------------- */
+
+.container-logo-gemdam {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    z-index: 9;
+}
+
+.logo-gemdam {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-gemdam p {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #2cddcf;
+}
+
+/* ----------------------- */
+/* ----- NAV MENU */
+/* ----------------------- */
+.container-menu {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    z-index: 2;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar p {
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2cddcf;
+    padding: 0.9em;
+}
+
+
+.nav-overlay {
+    position: fixed;
+    background-color: #000;
+    z-index: -2;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 4em;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hamBox {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: 0.3 ease;
+    padding: 2.4em;
+    cursor: pointer;
+}
+
+.lineTop,
+.lineMid,
+.lineBottom {
+    margin: 0 auto;
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    left: 0;
+    right: 0;
+    transform: rotate(0deg);
+    transition: all 0.4s;
+}
+
+.lineTop {
+    top: 2.1em;
+}
+
+.lineMid {
+    bottom: 2.2em;
+}
+
+.lineBottom {
+    bottom: 1.8em;
+}
+
+.lineTop.spin {
+    top: 2.35em;
+    transform: rotate(135deg);
+}
+
+.lineMid.spin {
+    bottom: 2.35em;
+    transform: rotate(225deg);
+    /* background-color: #fff; */
+}
+
+.lineBottom.spin {
+    top: 2.35em;
+    transform: rotate(135deg);
+    opacity: 0;
+}
+
+/* ----------------------- */
+/* ----- LEFT */
+/* ----------------------- */
+
+.container-left-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+}
+
+.container-left-bottom p {
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2cddcf;
+}
+
+/* ----------------------- */
+/* ----- RIGHT */
+/* ----------------------- */
+
+.container-right-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+}
+
+.container-right-bottom p {
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2cddcf;
+}
