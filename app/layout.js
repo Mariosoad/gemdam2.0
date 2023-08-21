@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
         {/* METATAGS */}
-        <link rel="icon" href="./next.svg" />
+        <link rel="icon" href="./logo-gemdam.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Gemdam Studio</title>
         <meta name="description" content="La mejor empresa del mundo junto al Rodri multimedial" />
