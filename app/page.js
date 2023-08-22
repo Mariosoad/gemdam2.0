@@ -1,6 +1,7 @@
-import Navigation from './web/Gemdam/components/navigation/navigation'
-import Gemdam from './web/Gemdam/web/gemdam/gemdam'
-import Contact from './web/Gemdam/web/contact/contact'
+import Navigation from './web/Gemdam/components/navigation/navigation';
+import Gemdam from './web/Gemdam/web/gemdam/gemdam';
+import Business from './web/Gemdam/web/business/business';
+import Contact from './web/Gemdam/web/contact/contact';
 
 import "./globals.css"
 
@@ -9,6 +10,7 @@ export default function Homepage() {
     <main className="main">
       <Navigation />
       <Gemdam />
+      <Business />
       <Contact />
 
       <div className='lines'>

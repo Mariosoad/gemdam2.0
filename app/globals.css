@@ -122,3 +122,12 @@ a {
   height: 100%;
   background-color: #1818185a;
 }
+
+.tittle-section {
+  font-size: 4.5em;
+  font-weight: 600;
+  line-height: 1em;
+  color: #2cddcf;
+  padding-bottom: 70px;
+  margin-left: -4px !important;
+}

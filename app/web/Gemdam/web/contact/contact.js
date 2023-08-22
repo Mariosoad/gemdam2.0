@@ -8,7 +8,7 @@ export default function Contact() {
             <div className='back-tittle'><h2>CONTACT</h2></div>
             <div className='child-container-contact'>
                 <p className='subtittle-contact'>DOWN TO BUSINESS</p>
-                <h2 className='tittle-contact'>Lets create your ideal project</h2>
+                <h2 className='tittle-section'>Lets create your ideal project</h2>
                 <div className='container-request'>
                     <p>SEND A REQUEST</p>
                 </div>
