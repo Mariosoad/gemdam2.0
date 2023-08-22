@@ -3,9 +3,8 @@
 /* ----------------------- */
 
 .container-logo-gemdam {
-    position: absolute;
+    position: fixed;
     top: 30px;
-    left: 0px;
     z-index: 9;
 }
 
@@ -16,19 +15,26 @@
     justify-content: center;
 }
 
-.logo-gemdam p {
+.tittle-gemdam {
     font-size: 1.2em;
     font-weight: 900;
     color: #2cddcf;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.tittle-gemdam.dis {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* ----------------------- */
 /* ----- NAV MENU */
 /* ----------------------- */
 .container-menu {
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 0px;
+    right: 7.5%;
     z-index: 2;
 }
 
@@ -38,6 +44,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    column-gap: 15px;
 }
 
 .navbar p {
@@ -45,9 +52,8 @@
     font-weight: 600;
     letter-spacing: 1px;
     color: #2cddcf;
-    padding: 0.9em;
+    /* padding: 0.9em; */
 }
-
 
 .nav-overlay {
     position: fixed;
@@ -64,11 +70,11 @@
 
 .hamBox {
     position: relative;
-    width: 25px;
+    width: 5px;
     height: 25px;
     border-radius: 50%;
     transition: 0.3 ease;
-    padding: 2.4em;
+    padding: 2.4em 0px;
     cursor: pointer;
 }
 
@@ -122,8 +128,7 @@
 /* ----------------------- */
 
 .container-left-bottom {
-    position: absolute;
-    left: 0;
+    position: fixed;
     bottom: 30px;
 }
 
@@ -139,8 +144,8 @@
 /* ----------------------- */
 
 .container-right-bottom {
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 7.5%;
     bottom: 30px;
 }
 

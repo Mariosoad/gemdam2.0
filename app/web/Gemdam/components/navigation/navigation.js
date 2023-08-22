@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import Image from "next/image"
 
 import "./navigation.css"
@@ -8,6 +8,23 @@ import "./navigation.css"
 export default function Navigation() {
 
     const [navOpen, setNavOpen] = useState(false);
+    const [showGem, setShowGem] = useState(true);
+
+    const handleScroll = () => {
+        if (window.scrollY === 0) {
+            setShowGem(true);
+        } else {
+            setShowGem(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     return (
         <>
@@ -15,7 +32,7 @@ export default function Navigation() {
                 <div className="logo-gemdam">
                     <Image width={50} height={50}
                         src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo" />
-                    <p>GEMDAM</p>
+                    <p className={showGem ? "tittle-gemdam" : "tittle-gemdam dis"}>GEMDAM</p>
                 </div>
             </div>
 

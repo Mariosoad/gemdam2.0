@@ -13,6 +13,14 @@ h3 {
   font-family: var(--font-roboto) !important;
 }
 
+h4 {
+  font-family: var(--font-roboto) !important;
+}
+
+h5 {
+  font-family: var(--font-roboto) !important;
+}
+
 p {
   font-family: var(--font-roboto) !important;
 }
@@ -56,8 +64,8 @@ html {
 }
 
 body {
-  max-width: 80%;
-  width: 80%;
+  max-width: 85%;
+  width: 85%;
   overflow-x: hidden;
   margin: auto;
   align-items: center;
@@ -71,6 +79,46 @@ a {
 
 .main {
   min-height: 100vh;
+  max-width: 100%;
   width: 100%;
   position: relative;
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 960px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  z-index: -2;
+}
+
+.line-1 {
+  width: 3px;
+  height: 100%;
+  background-color: #181818;
+}
+
+.line-2 {
+  width: 3px;
+  height: 100%;
+  background-color: #181818;
+}
+
+.line-3 {
+  width: 3px;
+  height: 100%;
+  background-color: #181818;
+}
+
+.line-4 {
+  width: 3px;
+  height: 100%;
+  background-color: #1818185a;
 }

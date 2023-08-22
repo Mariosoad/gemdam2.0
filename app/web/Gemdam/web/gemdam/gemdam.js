@@ -18,8 +18,8 @@ export default function Gemdam() {
                         </div>
                     </div>
                 </div>
-                <div className='container-shader'>
-                    <p>shader</p>
+                <div className='container-shader'> 
+                    {/* <p>shader</p> */}
                 </div>
             </div>
         </div>
