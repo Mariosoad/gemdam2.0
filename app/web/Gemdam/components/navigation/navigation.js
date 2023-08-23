@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 export default function Navigation() {
 
+    const [isHovered, setIsHovered] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
     const [showGem, setShowGem] = useState(true);
 
@@ -26,6 +27,33 @@ export default function Navigation() {
         };
     }, []);
 
+    const dataLinks = [
+        {
+            id: "01",
+            title: "Home",
+            href: "/",
+        },
+        {
+            id: "02",
+            title: "Business",
+            href: "#Business",
+        },
+        {
+            id: "03",
+            title: "Clients",
+            href: "#Clients",
+        },
+        {
+            id: "04",
+            title: "About",
+            href: "#About",
+        },
+        {
+            id: "05",
+            title: "Contact",
+            href: "#Contact",
+        },
+    ]
 
     return (
         <>
@@ -49,20 +77,44 @@ export default function Navigation() {
                     {/* MENU NAVBAR */}
                     <div className="navbar">
                         <Link href="/#Contact"><p>CONTACT</p></Link>
-                        <p>MENU</p>
+                        <p onClick={() => setNavOpen(!navOpen)}>MENU</p>
                         <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
-                            <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
-                                <span className={navOpen ? "lineTop spin" : "lineTop"}></span>
-                                <span className={navOpen ? "lineMid spin" : "lineMid"}></span>
-                                <span className={navOpen ? "lineBottom spin" : "lineBottom"}></span>
+                            <div className="hamBox">
+                                <div>
+                                    <span className={navOpen ? "lineTop spin" : "lineTop"}></span>
+                                    <span className={navOpen ? "lineMid spin" : "lineMid"}></span>
+                                    <span className={navOpen ? "lineBottom spin" : "lineBottom"}></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {/* MENU OVERLAY */}
                     <div className="nav-overlay" style={{ top: navOpen ? "0" : "-100%", transitionDelay: navOpen ? "0s" : "0s" }}>
-                        <p>Tu hermana</p>
-                        <p>Tu hermana2</p>
-                        <p>Tu hermana3</p>
+                        <div style={{ filter: 'brightness(0.1)' }} className='lines'>
+                            <div className='line-1'></div>
+                            <div className='line-2'></div>
+                            <div className='line-3'></div>
+                            <div className='line-4'></div>
+                        </div>
+                        <div className='container-overlay'>
+                            <div className='tittle-menu'>
+                                <h2>MENU</h2>
+                            </div>
+                            <div className='links-menu'>
+                                {dataLinks.map(l => {
+                                    return (
+                                        <Link key={l.href} as={l.href} href={l.href}>
+                                            <div className='child-link-menu'
+                                                onMouseEnter={() => setIsHovered(true)}
+                                                onMouseLeave={() => setIsHovered(false)}>
+                                                <span className='quare'>{l.id}</span>
+                                                <p>{l.title}</p>
+                                            </div>
+                                        </Link>
+                                    )
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

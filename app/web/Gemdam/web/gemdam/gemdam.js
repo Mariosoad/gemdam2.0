@@ -7,7 +7,7 @@ import "./gemdam.css"
 export default function Gemdam() {
 
     const ConsoleTextEffect = () => {
-        const words = ['AR', 'VR'];
+        const words = ['AR', 'VR', 'VR', 'VR'];
         const [visible, setVisible] = useState(true);
         const [letterCount, setLetterCount] = useState(1);
         const [x, setX] = useState(1);

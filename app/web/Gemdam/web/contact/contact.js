@@ -14,23 +14,39 @@ export default function Contact() {
                     <p>SEND A REQUEST</p>
                 </div>
                 <div className='container-call'>
-                    <div className='text-swap'>
-                        <Link className='cont-text-swap' href="tel:+542214370979" target='_blank'>
-                            <p>+54 (221) 437 0979</p>
-                            <p>+54 (221) 437 0979</p>
+                    <div>
+                        <Link href="tel:+542214370979" target='_blank'>
+                            <div className='text-swap'>
+                                <div className='cont-text-swap'>
+                                    <p>+54 (221) 437 0979</p>
+                                    <p>+54 (221) 437 0979</p>
+                                </div>
+                            </div>
                         </Link>
                     </div>
-                    <div><Link href="tel:+542214768804" target='_blank'><p>+54 (221) 476 8804</p></Link></div>
-                    <div><Link href='mailto:info@gemdam.com'><p>INFO@GEMDAM.COM</p></Link></div>
+                    <div><Link href="tel:+542214768804" target='_blank'>
+                        <div className='text-swap'>
+                            <div className='cont-text-swap'>
+                                <p>+54 (221) 476 8804</p>
+                                <p>+54 (221) 476 8804</p>
+                            </div>
+                        </div>
+                    </Link>
+                    </div>
+                    <div>
+                        <Link href='mailto:info@gemdam.com'>
+                            <div className='text-swap'>
+                                <div className='cont-text-swap'>
+                                    <p>INFO@GEMDAM.COM</p>
+                                    <p>INFO@GEMDAM.COM</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
                 <div className='container-direction'>
                     <div><p>La Plata, Buenos Aires, Argentina</p></div>
-                    <button className='text-swap'>
-                        <div className='cont-text-swap'>
-                            <p>©2023 GEMDAM </p>
-                            <p>©2023 GEMDAM STUDIO</p>
-                        </div>
-                    </button>
+                    <div><p>© 2023 Gemdam Studio</p></div>
                 </div>
             </div>
         </div>
