@@ -17,15 +17,53 @@
 
 .tittle-gemdam {
     font-size: 1.2em;
-    font-weight: 900;
+    font-weight: 600;
     color: #2cddcf;
-    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 350ms;
+}
+
+.tittle-gemdam span {
+    color: transparent !important;
 }
 
 
 .tittle-gemdam.dis {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+
+.logo-swap {
+    display: block;
+    width: 100% !important;
+    height: 50px;
+    overflow: hidden;
+    border: unset;
+    background-color: transparent;
+    transition: all 200ms;
+}
+
+.cont-logo-swap {
+    width: 100% !important;
+    height: 110px !important;
+    padding: 0px !important;
+    transform: translateY(0%);
+    transition: all 350ms;
+}
+
+.swap {
+    transform: translateY(-50%) !important;
+    transition: all 350ms;
+}
+
+.cont-logo-swap p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
 }
 
 /* ----------------------- */

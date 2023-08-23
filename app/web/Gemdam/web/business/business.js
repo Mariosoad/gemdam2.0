@@ -24,8 +24,8 @@ export default function Business() {
                             <p className='number'>02</p>
                             <div className='sep-line'></div>
                             <h4>AUGMENTED REALITY</h4>
-                            <p className='text-description'>Inmersive technology ideal to provide unique interactive experiences
-                                and optimize channels of communications reducing time and cost</p>
+                            <p className='text-description'>An ideal resource for mixed reality experiences than will enchance your
+                                projects with the combined interaction of spatiality and digital objects.</p>
                         </div>
                     </div>
                     <div className='description'>
@@ -33,8 +33,8 @@ export default function Business() {
                             <p className='number'>03</p>
                             <div className='sep-line'></div>
                             <h4>WEB DEVELOPMENT</h4>
-                            <p className='text-description'>Inmersive technology ideal to provide unique interactive experiences
-                                and optimize channels of communications reducing time and cost</p>
+                            <p className='text-description'>Adjusted solutions for any type of client seeking to step up improving
+                                their projects in terms of design, functionality and comunication.</p>
                         </div>
                     </div>
                 </div>
