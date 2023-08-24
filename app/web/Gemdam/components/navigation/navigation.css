@@ -159,7 +159,6 @@
 .nav-overlay {
     position: fixed;
     background-color: #121212;
-    border-bottom: 3px solid #181818;
     z-index: -2;
     top: -150px;
     left: 0;
