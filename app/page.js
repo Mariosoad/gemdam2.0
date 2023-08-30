@@ -1,6 +1,7 @@
 import Navigation from './web/Gemdam/components/navigation/navigation';
 import Gemdam from './web/Gemdam/web/gemdam/gemdam';
 import Business from './web/Gemdam/web/business/business';
+import Shader02 from './web/Gemdam/components/shaders/02/shader02';
 import Companies from './web/Gemdam/web/companies/companies';
 import About from './web/Gemdam/web/about/about';
 import Contact from './web/Gemdam/web/contact/contact';
@@ -13,6 +14,7 @@ export default function Homepage() {
       <Navigation />
       <Gemdam />
       <Business />
+      <Shader02 />
       <Companies />
       <About />
       <Contact />

@@ -17,6 +17,11 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: "imagedelivery.net",
                 port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: "res.cloudinary.com",
+                port: '',
             }
         ],
     },

@@ -1,6 +1,20 @@
 import React from 'react'
+import Image from 'next/image';
 
 import './about.css';
+
+const dataTeam = [
+    {
+        tittle: "HINOSTROZA MARIO",
+        subtittle: "CEO & CO-Founder | Lead Programmer",
+        url: "https://res.cloudinary.com/deushkfkk/image/upload/v1674752608/GEMDAM/mario_vvix9l.png",
+    },
+    {
+        tittle: "ISASMENDI RODRIGO",
+        subtittle: "CO-Founder & 3D Artist",
+        url: "https://res.cloudinary.com/deushkfkk/image/upload/v1674752609/GEMDAM/rori_mzbthw.jpg",
+    }
+]
 
 export default function About() {
     return (
@@ -32,9 +46,24 @@ export default function About() {
                                 and providing guidance and support throughout the whole process until the launching of the
                                 final product. Our goal is to empower our clients to achieve sustained long-term sucess, solidifying
                                 their position as influential companies capable of attaining lasting result.
-
                             </p>
                         </div>
+                    </div>
+                    <div className='container-img-team'>
+                        {dataTeam.map(l => {
+                            return (
+                                <div className='child-img-team' key={l}>
+                                    <div>
+                                        <Image width={100} height={100} src={l.url} />
+                                        <div className='container-team-tittle'>
+                                            <h4>{l.tittle}</h4>
+                                            <div className='sep-line-large'></div>
+                                        </div>
+                                        <h5>{l.subtittle}</h5>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

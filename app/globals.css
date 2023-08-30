@@ -64,8 +64,8 @@ html {
 }
 
 body {
-  max-width: 85%;
-  width: 85%;
+  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
   margin: auto;
   align-items: center;
