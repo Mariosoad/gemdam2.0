@@ -59,7 +59,6 @@ export default function Gemdam() {
                 <div className='container-tittle'>
                     <div className='child-container-tittle'>
                         <ConsoleTextEffect />
-                        {/* <h1>VR</h1> */}
                         <h1>DEVELOP</h1>
                         <h1>MENT</h1>
                         <div className='container-subtittle'>

@@ -1,0 +1,40 @@
+{
+    "gemdam": {
+        "title": "Bienvenido a mi sitio",
+        "subtitle": "Explora nuestras increíbles ofertas"
+    },
+    "business": {
+        "title": "BUSINESS",
+        "subtitle": "NOW ABOUT BUSINESS",
+        "titleDescription": "We offer a wide variety of solutions",
+        "description": {
+            "vr": {
+                "number": "01",
+                "title": "VIRTUAL REALITY",
+                "text": "Inmersive technology ideal to provide unique interactive experiences and optimize channels of communications reducing time and cost"
+            },
+            "ar": {
+                "number": "02",
+                "title": "AUGMENTED REALITY",
+                "text": "An ideal resource for mixed reality experiences than will enchance your projects with the combined interaction of spatiality and digital objects."
+            },
+            "dev": {
+                "number": "03",
+                "title": "WEB DEVELOPMENT",
+                "text": "Adjusted solutions for any type of client seeking to step up improving their projects in terms of design, functionality and comunication."
+            }
+        }
+    },
+    "companies": {
+        "title": "Sección 1",
+        "content": "Contenido de la sección 1..."
+    },
+    "about": {
+        "title": "Sección 2",
+        "content": "Contenido de la sección 2..."
+    },
+    "contact": {
+        "title": "Sección 3",
+        "content": "Contenido de la sección 3..."
+    }
+}
