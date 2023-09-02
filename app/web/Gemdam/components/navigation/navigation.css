@@ -91,6 +91,23 @@
     color: #2cddcf;
 }
 
+.navbar button {
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2cddcf;
+    background-color: transparent !important;
+    outline: none !important;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-language {
+    position: absolute;
+    right: -20px;
+    bottom: 0px;
+}
+
 .hamBox {
     position: relative;
     width: 5px;
@@ -311,7 +328,7 @@
 
 .container-right-bottom {
     position: fixed;
-    right: 7.5%;
+    right: 6.5%;
     bottom: 30px;
 }
 

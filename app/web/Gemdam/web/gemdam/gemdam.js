@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
 import React, { useEffect, useState } from 'react'
 
 import "./gemdam.css"
 
-export default function Gemdam() {
+export default function Gemdam(props) {
 
     const ConsoleTextEffect = () => {
         const words = ['AR', 'VR', 'VR', 'WEB', 'WEB'];
@@ -53,6 +53,9 @@ export default function Gemdam() {
             </div>
         );
     };
+    
+    const dataGemdam = props.dataText;
+
     return (
         <div className='container-gemdam'>
             <div className='child-container-gemdam'>
@@ -63,7 +66,7 @@ export default function Gemdam() {
                         <h1>MENT</h1>
                         <div className='container-subtittle'>
                             <div></div>
-                            <p>WORLD-CLASS DESIGNS</p>
+                            <p>{dataGemdam.subtitle}</p>
                         </div>
                     </div>
                 </div>

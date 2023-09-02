@@ -1,0 +1,136 @@
+{
+    "gemdam": {
+        "title": "DESARROLLO",
+        "subtitle": "DISEÑOS CON CATEGORÍA"
+    },
+    "business": {
+        "title": "NEGOCIOS",
+        "subtitle": "ACERCA DEL NEGOCIO",
+        "titleDescription": "Ofrecemos una amplia variedad de soluciones",
+        "description": [
+            {
+                "number": "01",
+                "title": "REALIDAD VIRTUAL",
+                "text": "Tecnología inmersiva ideal para proveer experiencias interactivas únicas y optimizar canales de comunicación, reduciendo tiempos y costos."
+            },
+            {
+                "number": "02",
+                "title": "REALIDAD AUMENTADA",
+                "text": "Un recurso ideal para experiencias de realidad mixta que potenciarán tus proyectos con la combinación del recurso de la espacialidad y objetos digitales."
+            },
+            {
+                "number": "03",
+                "title": "DESARROLLO WEB",
+                "text": "Soluciones a medida para cualquier cliente que busque un salto de calidad mediante la mejora de sus proyectos en términos de diseño, funcionalidad y comunicación efectiva."
+            }
+        ],
+        "qualities": {
+            "tittle": "MEJORES CUALIDADES",
+            "sections": [
+                {
+                    "uno": "INMERSION",
+                    "dos": "SIMULACION",
+                    "tres": "EXPERIENCIA"
+                },
+                {
+                    "uno": "INTERACCION",
+                    "dos": "POTENCIAMIENTO",
+                    "tres": "INTEGRACION"
+                },
+                {
+                    "uno": "RESPONSIVO",
+                    "dos": "SENCILLO",
+                    "tres": "EFICIENTE"
+                }
+            ]
+        }
+    },
+    "companies": {
+        "title": "CLIENTES",
+        "subtitle": "DEJELO EN NUESTRAS MANOS",
+        "titleDescription": "Compañías que confían en nuestro trabajo",
+        "clients": [
+            {
+                "id": "01",
+                "tittle": "STIMULUS VR",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+            },
+            {
+                "id": "02",
+                "tittle": "URUS",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+            },
+            {
+                "id": "03",
+                "tittle": "RADIOANDINA",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+            },
+            {
+                "id": "04",
+                "tittle": "BRIPTRAVEL",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+            },
+            {
+                "id": "05",
+                "tittle": "MAXIVIAJES",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+            },
+            {
+                "id": "06",
+                "tittle": "RADIOFEST",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+            }
+        ]
+    },
+    "about": {
+        "title": "NOSOTROS",
+        "subtitle": "NUESTRA FILOSOFÍA",
+        "titleDescription": "ACERCA DE NUESTRO DREAM TEAM",
+        "subtitleDescription": "QUIENES SOMOS",
+        "sections": [
+            {
+                "text": "Somos una compañía especializada en la creación de experiencias digitales, que apunta a transformar la comunicación estratégica dentro de las compañías y en su relación con sus clientes. Para lograrlo, desarrollamos soluciones capaces de potenciar los resultados de negocio de cada marca y su relevancia, mediante una mejoría en el posicionamiento de mercado y un incremento de valor durante su tiempo de vida."
+            },
+            {
+                "text": "Aceptar la diversidad dentro de un ambiente abierto e inclusivo es un aspecto fundamental de nuestra cultura de empresa. Buscamos cultivar activamente una atmósfera de confianza y respeto, donde se reconozca el valor único que cada individuo puede aportar. Por esto nos comprometemos a construir este espacio a partir de fuertes estándares éticos y asegurando una comunicación siempre transparente y significativa."
+            },
+            {
+                "text": "Desarrollamos cada proyecto desde el comienzo, empezando por etapas de consulta y brindado una guía constante durante todo el proceso de desarrollo, hasta el lanzamiento final del producto. Nuestra meta es empoderar a nuestros clientes para que logren resultados sostenidos a largo plazo, consolidándose en una posición de fuerte influencia entre la competencia, con la capacidad de obtener resultados duraderos."
+            }
+        ],
+        "team": [
+            {
+                "url": "https://res.cloudinary.com/deushkfkk/image/upload/v1674752608/GEMDAM/mario_vvix9l.png",
+                "name": "HINOSTROZA MARIO",
+                "role": "CEO & CO-Founder | Lead Programmer"
+            },
+            {
+                "url": "https://res.cloudinary.com/deushkfkk/image/upload/v1674752609/GEMDAM/rori_mzbthw.jpg",
+                "name": "ISASMENDI RODRIGO",
+                "role": "CO-Founder | 3D Artist"
+            }
+        ]
+    },
+    "contact": {
+        "title": "CONTACTO",
+        "subtitle": "DIRECTO A LOS NEGOCIOS",
+        "titleDescription": "CREEMOS TU PROYECTO IDEAL",
+        "subtitleDescription": "ENVIAR SOLICITUD",
+        "call": [
+            {
+                "href": "tel:+542214370979",
+                "tel": "+54 (221) 437 0979"
+            },
+            {
+                "href": "tel:+542214768804",
+                "tel": "+54 (221) 476 8804"
+            },
+            {
+                "href": "mailto:info@gemdam.com",
+                "tel": "INFO@GEMDAM.COM"
+            }
+        ],
+        "location": "La Plata, Buenos Aires, Argentina",
+        "copyright": " © 2023 Gemdam Studio"
+    }
+}

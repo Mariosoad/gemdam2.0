@@ -1,0 +1,136 @@
+{
+  "gemdam": {
+    "title": "DEVELOPMENT",
+    "subtitle": "WORLD-CLASS DESIGNS"
+  },
+  "business": {
+    "title": "BUSINESS",
+    "subtitle": "NOW ABOUT BUSINESS",
+    "titleDescription": "We offer a wide variety of solutions",
+    "description": [
+      {
+        "number": "01",
+        "title": "VIRTUAL REALITY",
+        "text": "Inmersive technology ideal to provide unique interactive experiences and optimize channels of communications reducing time and cost"
+      },
+      {
+        "number": "02",
+        "title": "AUGMENTED REALITY",
+        "text": "An ideal resource for mixed reality experiences than will enchance your projects with the combined interaction of spatiality and digital objects."
+      },
+      {
+        "number": "03",
+        "title": "WEB DEVELOPMENT",
+        "text": "Adjusted solutions for any type of client seeking to step up improving their projects in terms of design, functionality and comunication."
+      }
+    ],
+    "qualities": {
+      "tittle": "BEST QUALITIES",
+      "sections": [
+        {
+          "uno": "IMMERSION",
+          "dos": "SIMULATION",
+          "tres": "EXPERIENCE"
+        },
+        {
+          "uno": "INTERACTION",
+          "dos": "ENHANCEMENT",
+          "tres": "INTEGRATION"
+        },
+        {
+          "uno": "RESPONSIVE",
+          "dos": "ACCESIBLE",
+          "tres": "EFFICIENT"
+        }
+      ]
+    }
+  },
+  "companies": {
+    "title": "CLIENTS",
+    "subtitle": "LEAVE IT TO US",
+    "titleDescription": "Companies that trust our work process",
+    "clients": [
+      {
+        "id": "01",
+        "tittle": "STIMULUS VR",
+        "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+      },
+      {
+        "id": "02",
+        "tittle": "URUS",
+        "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+      },
+      {
+        "id": "03",
+        "tittle": "RADIOANDINA",
+        "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+      },
+      {
+        "id": "04",
+        "tittle": "BRIPTRAVEL",
+        "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+      },
+      {
+        "id": "05",
+        "tittle": "MAXIVIAJES",
+        "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+      },
+      {
+        "id": "06",
+        "tittle": "RADIOFEST",
+        "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+      }
+    ]
+  },
+  "about": {
+    "title": "ABOUT US",
+    "subtitle": "OUR PHILOSOPHY",
+    "titleDescription": "Learn more about our dream team",
+    "subtitleDescription": "WHO WE ARE",
+    "sections": [
+      {
+        "text": "We are company specialized in creating digital experiences thay ains to transform strategic comunication within companies and in relation to their clients. To achieve this, we develop solutions capable of enhancing the business outcomes of each brand and its relevance, through improved market positioning and increased value growth throughout its lifecycle."
+      },
+      {
+        "text": "Embracing diversity within an open and inclusive environment is is a fundamental aspect of our company culture. We actively cultivate an atmosphere of trust and respect, recognizing the unique value that each individual brings. We commit to build this through robust ethical standards and ensuring transparent meaningful and responsive communications."
+      },
+      {
+        "text": "We develop every proyect since the beginning, starting from stages of consultation and providing guidance and support throughout the whole process until the launching of the final product. Our goal is to empower our clients to achieve sustained long-term sucess, solidifying their position as influential companies capable of attaining lasting result."
+      }
+    ],
+    "team": [
+      {
+        "url": "https://res.cloudinary.com/deushkfkk/image/upload/v1674752608/GEMDAM/mario_vvix9l.png",
+        "name": "HINOSTROZA MARIO",
+        "role": "CEO & CO-Founder | Lead Programmer"
+      },
+      {
+        "url": "https://res.cloudinary.com/deushkfkk/image/upload/v1674752609/GEMDAM/rori_mzbthw.jpg",
+        "name": "ISASMENDI RODRIGO",
+        "role": "CO-Founder & 3D Artist"
+      }
+    ]
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "DOWN TO BUSINESS",
+    "titleDescription": "Lets create your ideal project",
+    "subtitleDescription": "SEND A REQUEST",
+    "call": [
+      {
+        "href": "tel:+542214370979",
+        "tel": "+54 (221) 437 0979"
+      },
+      {
+        "href": "tel:+542214768804",
+        "tel": "+54 (221) 476 8804"
+      },
+      {
+        "href": "mailto:info@gemdam.com",
+        "tel": "INFO@GEMDAM.COM"
+      }
+    ],
+    "location": "La Plata, Buenos Aires, Argentina",
+    "copyright": "© 2023 Gemdam Studio"
+  }
+}

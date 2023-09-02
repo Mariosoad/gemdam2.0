@@ -6,7 +6,7 @@ import Image from "next/image"
 import "./navigation.css"
 import Link from 'next/link';
 
-export default function Navigation() {
+export default function Navigation({ onChangeLanguage, currentLanguage }) {
 
     const [isHovered, setIsHovered] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
@@ -55,6 +55,10 @@ export default function Navigation() {
         },
     ]
 
+    const toggleLanguage = () => {
+        const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
+        onChangeLanguage(newLanguage);
+    };
     return (
         <>
             <div className="container-logo-gemdam">
@@ -77,7 +81,7 @@ export default function Navigation() {
                     {/* MENU NAVBAR */}
                     <div className="navbar">
                         <Link href="/#Contact"><p>CONTACT</p></Link>
-                        <p onClick={() => setNavOpen(!navOpen)}>MENU</p>
+                        <button onClick={() => setNavOpen(!navOpen)}>MENU</button>
                         <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
                             <div className="hamBox">
                                 <div>
@@ -87,6 +91,9 @@ export default function Navigation() {
                                 </div>
                             </div>
                         </div>
+                        <button className='btn-language' onClick={toggleLanguage}>
+                            {currentLanguage === 'en' ? 'ES' : 'EN'}
+                        </button>
                     </div>
                     {/* MENU OVERLAY */}
                     <div className="nav-overlay" style={{ top: navOpen ? "0" : "-100%", transitionDelay: navOpen ? "0s" : "0s" }}>
