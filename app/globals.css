@@ -220,7 +220,7 @@ a {
     font-weight: 600;
     line-height: 1em;
     color: #2cddcf;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
     margin-left: -4px !important;
   }
 
@@ -313,6 +313,14 @@ a {
     text-align: left;
   }
 
+  .text-description {
+    width: 85%;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: white;
+    text-align: left;
+  }
+
   .subtittle-top {
     font-size: 0.8em;
     font-weight: 400;
@@ -328,7 +336,7 @@ a {
  */
 @media (max-width: 520px) {
   .tittle-section {
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 600;
     line-height: 1em;
     color: #2cddcf;

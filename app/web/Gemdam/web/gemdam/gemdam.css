@@ -249,7 +249,7 @@
  */
 @media (max-width: 520px) {
     .container-gemdam {
-        width: 360px;
+        width: 350px;
         height: 100vh;
         margin: auto;
     }

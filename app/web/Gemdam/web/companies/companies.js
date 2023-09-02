@@ -21,7 +21,7 @@ export default function Companies(props) {
                                 <div className='container-logo-img'>
                                     <Image width={100} height={35} src={l.url} alt={l.tittle} />
                                 </div>
-                                <div className='sep-line-mid'></div>
+                                <div className='sep-line-mid one-line'></div>
                                 <div className='container-logo-number'>
                                     <p>{l.id}</p>
                                     <div className='sep-line-mid'></div>

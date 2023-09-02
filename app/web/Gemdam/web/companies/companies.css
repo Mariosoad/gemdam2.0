@@ -1,53 +1,288 @@
-.container-companies {
-    width: 960px;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/** 
+ * (min-width: 981px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (min-width: 981px) {
+
+    .container-companies {
+        width: 960px;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .child-container-companies {
+        width: 100%;
+    }
+
+    .container-logos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 16.6%;
+    }
+
+    .container-logo-img {
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        filter: grayscale();
+    }
+
+    .container-logo-number {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 180px;
+    }
+
+    .container-logo-number p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: white;
+    }
 }
 
-.child-container-companies {
-    width: 100%;
+/** 
+ * (max-width: 980px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (max-width: 980px) {
+
+    .container-companies {
+        width: 660px;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .child-container-companies {
+        width: 100%;
+    }
+
+    .container-logos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .logo {
+        width: 33.3%;
+    }
+
+    .container-logo-img {
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        filter: grayscale();
+    }
+
+    .container-logo-number {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 100px;
+    }
+
+    .container-logo-number p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: white;
+    }
 }
 
-.container-logos {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+/** 
+ * (max-width: 768px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (max-width: 768px) {
+
+    .container-companies {
+        width: 560px;
+        height: auto;
+        margin: auto;
+    }
+
+    .container-companies .one-line {
+        display: none;
+    }
+
+    .container-logos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .logo {
+        width: 33.3%;
+    }
+
+    .container-logo-img {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-logo-number {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 50px;
+    }
+
+    .container-logo-number p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: white;
+    }
 }
 
-.logo {
-    width: 16.6%;
+/** 
+ * (max-width: 520px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (max-width: 520px) {
+
+    .container-companies {
+        width: 350px;
+        margin: auto;
+    }
+
+    .container-companies .one-line {
+        display: none;
+    }
+
+    .container-logos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .logo {
+        width: 48%;
+    }
+
+    .container-logo-img {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-logo-number {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 50px;
+    }
+
+    .container-logo-number p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: white;
+    }
 }
 
-.container-logo-img {
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+/** 
+ * (max-width: 380px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (max-width: 380px) {
 
-.logo img {
-    filter: grayscale();
-}
+    .container-companies {
+        width: 320px;
+        margin: auto;
+    }
 
-.container-logo-number {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    height: 180px;
-}
+    .container-companies .one-line {
+        display: none;
+    }
 
-.container-logo-number p {
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.5em;
-    color: white;
+    .container-logos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .logo {
+        width: 48%;
+    }
+
+    .container-logo-img {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-logo-number {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 50px;
+    }
+
+    .container-logo-number p {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: white;
+    }
 }
