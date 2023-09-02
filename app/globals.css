@@ -355,5 +355,6 @@ a {
     font-size: 4.5em;
     font-weight: 900;
     transform: rotate(-90deg);
+    top: 40%;
   }
 }
