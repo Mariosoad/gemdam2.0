@@ -174,7 +174,6 @@
     .lineMid.spin {
         bottom: 2.35em;
         transform: rotate(225deg);
-        /* background-color: #fff; */
     }
 
     .lineBottom.spin {
@@ -190,7 +189,7 @@
     .nav-overlay {
         position: fixed;
         background-color: #121212;
-        z-index: -2;
+        z-index: -1;
         top: -150px;
         left: 0;
         width: 100%;
@@ -427,7 +426,7 @@
 
     .container-navigation {
         position: fixed;
-        width: 660px;
+        width: 860px;
         height: 100vh;
         margin: auto;
         left: 0;
@@ -785,13 +784,28 @@
 
     .container-navigation {
         position: fixed;
-        width: 560px;
+        width: 660px;
         height: 100vh;
         margin: auto;
         left: 0;
         right: 0;
     }
 
+    /* ----------------------- */
+    /* ----- LEFT */
+    /* ----------------------- */
+
+    .container-left-bottom {
+        display: none;
+    }
+
+    /* ----------------------- */
+    /* ----- RIGHT */
+    /* ----------------------- */
+
+    .container-right-bottom {
+        display: none;
+    }
 }
 
 /** 
