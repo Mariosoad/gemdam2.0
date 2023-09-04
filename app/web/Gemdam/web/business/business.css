@@ -5,7 +5,7 @@
  */
 @media (min-width: 981px) {
     .container-business {
-        width: 960px;
+        width: 760px;
         height: 100vh;
         margin: auto;
         display: flex;
@@ -89,6 +89,110 @@
         font-size: 0.8em;
         font-weight: 400;
         color: white;
+    }
+}
+
+/** 
+ * (min-width: 1200px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (min-width: 1200px) {
+
+    .container-business {
+        width: 860px;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+/** 
+ * (min-width: 1336px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (min-width: 1336px) {
+
+    .container-business {
+        width: 960px;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .number {
+        font-size: 0.8em !important;
+        font-weight: 600 !important;
+        padding: 15px 0px;
+        color: white;
+        transform: rotate(-90deg);
+    }
+
+    .child-container-qualities {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .qualities {
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #181818;
+    }
+
+    .qualities-left-line {
+        border-left: 1px solid #181818;
+    }
+
+    .child-qualities {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px solid #181818;
+    }
+
+    .child-qualities h5 {
+        padding: 55px 0px;
+        font-size: 0.8em;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+
+/** 
+ * (min-width: 1591px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (min-width: 1591px) {}
+
+/** 
+ * (min-width: 1920px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (min-width: 1920px) {
+
+    .container-business {
+        width: 1060px;
+        height: 100vh;
     }
 }
 
@@ -196,6 +300,7 @@
         width: 560px;
         height: auto;
         margin: auto;
+        padding: 60px 0px;
     }
 
     .container-description {

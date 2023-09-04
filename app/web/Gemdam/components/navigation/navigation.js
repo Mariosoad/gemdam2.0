@@ -60,7 +60,7 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
         onChangeLanguage(newLanguage);
     };
     return (
-        <>
+        <div className='container-navigation'>
             <div className="container-logo-gemdam">
                 <div className="logo-gemdam logo-swap">
                     <div className={showGem ? 'cont-logo-swap' : 'swap'}>
@@ -135,6 +135,6 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
             <div className="container-right-bottom">
                 <p>PORTFOLIO</p>
             </div>
-        </>
+        </div>
     )
 }

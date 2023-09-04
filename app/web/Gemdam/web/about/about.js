@@ -16,20 +16,20 @@ export default function About(props) {
                 <div className='container-team'>
                     <h4 className='tittle-description'>{dataAbout.subtitleDescription}</h4>
                     <div className='container-text-team'>
-                        {dataAbout.sections.map(item => {
+                        {dataAbout.sections.map((item, index) => {
                             return (
-                                <div key={item}>
+                                <div key={index}>
                                     <p className='text-description'>{item.text}</p>
                                 </div>
                             )
                         })}
                     </div>
                     <div className='container-img-team'>
-                        {dataAbout.team.map(item => {
+                        {dataAbout.team.map((item, index) => {
                             return (
-                                <div key={item} className='child-img-team'>
+                                <div key={index} className='child-img-team'>
                                     <div>
-                                        <Image width={100} height={100} src={item.url} />
+                                        <Image width={100} height={100} src={item.url} alt={item.name} />
                                         <div className='container-team-tittle'>
                                             <h4>{item.name}</h4>
                                             <div className='sep-line-large'></div>
