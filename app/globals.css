@@ -395,6 +395,13 @@ a {
     color: white;
     padding: 20px 7px 30px !important;
   }
+
+  .back-tittle {
+    font-size: 4.5em;
+    font-weight: 900;
+    transform: rotate(-90deg);
+    top: 40%;
+  }
 }
 
 /** 
@@ -425,12 +432,5 @@ a {
     font-weight: 400;
     color: white;
     padding: 20px 7px 30px !important;
-  }
-
-  .back-tittle {
-    font-size: 4.5em;
-    font-weight: 900;
-    transform: rotate(-90deg);
-    top: 40%;
   }
 }

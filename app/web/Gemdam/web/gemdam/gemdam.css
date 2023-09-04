@@ -166,7 +166,7 @@
         justify-content: center;
         background-color: #121212;
         position: relative;
-        z-index: 1;
+        z-index: -1;
     }
 
     .child-container-gemdam {
@@ -248,7 +248,6 @@
         align-items: center;
         justify-content: center;
         background-color: #121212;
-        z-index: 1;
     }
 
     .container-tittle {

@@ -4,6 +4,8 @@ import "./shader03.css";
 
 export default function Shader03() {
     return (
-        <div>SH03</div>
+        <div className='container-shader03'>
+            <p>SH03</p>
+        </div>
     )
 }
