@@ -79,6 +79,51 @@
     .container-shader {
         width: 50%;
     }
+
+    .container-line {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        overflow: hidden;
+        transform: rotate(-180deg);
+    }
+
+    .line-animation {
+        width: 2px;
+        height: 40px;
+        background-color: #2cddcf;
+        position: absolute;
+        bottom: 0px;
+        animation: moveLine 2s infinite;
+    }
+
+    @keyframes moveLine {
+        0% {
+            transform: translateY(0%);
+        }
+
+        40% {
+            transform: translateY(0%);
+        }
+
+        50% {
+            transform: translateY(100%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
 }
 
 /** 

@@ -53,7 +53,7 @@ export default function Gemdam(props) {
             </div>
         );
     };
-    
+
     const dataGemdam = props.dataText;
 
     return (
@@ -72,6 +72,9 @@ export default function Gemdam(props) {
                 </div>
                 <div className='container-shader'>
                     {/* <p>shader</p> */}
+                </div>
+                <div className='container-line'>
+                    <div className="line-animation"></div>
                 </div>
             </div>
         </div>
