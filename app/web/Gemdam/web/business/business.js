@@ -10,7 +10,10 @@ export default function Business(props) {
         <div className='container-business'>
             <div className='back-tittle'><h2>{dataBusiness.title}</h2></div>
             <div className='child-container-business'>
-                <p className='subtittle-top'>{dataBusiness.subtitle}</p>
+                <div className='subtittle-top mark-tittle'>
+                    <div className='sep-line-large'></div>
+                    <p>{dataBusiness.subtitle}</p>
+                </div>
                 <h2 className='tittle-section'>{dataBusiness.titleDescription}</h2>
                 <div className='container-description'>
                     {dataBusiness.description.map((item, index) => {
@@ -26,7 +29,10 @@ export default function Business(props) {
                         )
                     })}
                 </div>
-                <p className='subtittle-top'>{dataBusiness.qualities.title}</p>
+                <div className='subtittle-top mark-tittle'>
+                    <div className='sep-line-large'></div>
+                    <p>{dataBusiness.qualities.tittle}</p>
+                </div>
                 <div className='container-qualities'>
                     <div className='child-container-qualities'>
                         {dataBusiness.qualities.sections.map((item, index) => {

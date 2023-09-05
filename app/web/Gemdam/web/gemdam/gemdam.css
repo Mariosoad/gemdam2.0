@@ -13,7 +13,7 @@
         align-items: center;
         justify-content: center;
         background-color: #121212;
-        z-index: -1;
+        z-index: 2;
         position: relative;
     }
 
@@ -170,17 +170,7 @@
   * -------------------------------------------------------------------
   */
 @media (min-width: 1591px) {
-    .container-gemdam {
-        width: 960px;
-        height: 100vh;
-    }
 
-    .container-tittle {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
 }
 
 /** 
@@ -190,7 +180,7 @@
  */
 @media (min-width: 1920px) {
     .container-gemdam {
-        width: 1160px;
+        width: 1060px;
         height: 100vh;
     }
 }
@@ -211,7 +201,7 @@
         justify-content: center;
         background-color: #121212;
         position: relative;
-        z-index: -1;
+        z-index: 2;
     }
 
     .child-container-gemdam {

@@ -13,7 +13,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        z-index: -1;
         position: relative;
     }
 
@@ -38,6 +37,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
     }
 
     .container-request p {
@@ -217,7 +217,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        z-index: -1;
         position: relative;
     }
 
@@ -242,6 +241,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
     }
 
     .container-request p {

@@ -11,10 +11,16 @@ export default function About(props) {
         <div className='container-about'>
             <div className='back-tittle'><h2>{dataAbout.title}</h2></div>
             <div className='child-container-about'>
-                <p className='subtittle-top'>{dataAbout.subtitle}</p>
+                <div className='subtittle-top mark-tittle'>
+                    <div className='sep-line-large'></div>
+                    <p>{dataAbout.subtitle}</p>
+                </div>
                 <h2 className='tittle-section'>{dataAbout.titleDescription}</h2>
                 <div className='container-team'>
-                    <h4 className='tittle-description'>{dataAbout.subtitleDescription}</h4>
+                    <div className='subtittle-top mark-tittle'>
+                        <div className='sep-line-large'></div>
+                        <p>{dataAbout.subtitleDescription}</p>
+                    </div>
                     <div className='container-text-team'>
                         {dataAbout.sections.map((item, index) => {
                             return (

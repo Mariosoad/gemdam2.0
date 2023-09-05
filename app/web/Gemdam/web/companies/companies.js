@@ -11,7 +11,10 @@ export default function Companies(props) {
         <div className='container-companies'>
             <div className='back-tittle'><h2>{dataCompanies.title}</h2></div>
             <div className='child-container-companies'>
-                <p className='subtittle-top'>{dataCompanies.subtitle}</p>
+                <div className='subtittle-top mark-tittle'>
+                    <div className='sep-line-large'></div>
+                    <p>{dataCompanies.subtitle}</p>
+                </div>
                 <h2 className='tittle-section'>{dataCompanies.titleDescription}</h2>
                 <div className='container-logos'>
                     {dataCompanies.clients.map(l => {
