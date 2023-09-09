@@ -1,11 +1,13 @@
 import React from 'react'
 
-import "./shader02.css";
+import scriptShad from './Script'
+import './shader02.css'
 
-export default function Shader02() {
-    return (
-        <div className='container-shader02'>
-            <p>SH02</p>
-        </div>
-    )
+export default function shader02() {
+  return (
+    <div className='container-shader02'>
+        <p>tu hermana</p>
+        <scriptShad />
+    </div>
+  )
 }
