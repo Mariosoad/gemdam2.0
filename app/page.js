@@ -32,22 +32,13 @@ export default function Homepage() {
   return (
     <main className="main">
       {/* <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} /> */}
-
-        <Gemdam dataText={dataLanguage.gemdam} />
-
-        <Business dataText={dataLanguage.business} />
-
+      <Gemdam dataText={dataLanguage.gemdam} />
+      <Business dataText={dataLanguage.business} />
       {/* <Shader02 /> */}
-      <div className='snapScroll'>
-        <Companies dataText={dataLanguage.companies} />
-      </div>
-      <div className='snapScroll'>
-        <About dataText={dataLanguage.about} />
-      </div>
+      <Companies dataText={dataLanguage.companies} />
+      <About dataText={dataLanguage.about} />
       {/* <Shader03 /> */}
-      <div className='snapScroll'>
-        <Contact dataText={dataLanguage.contact} />
-      </div>
+      <Contact dataText={dataLanguage.contact} />
 
       {/* <div className='lines'>
         <div className='line-1'></div>
