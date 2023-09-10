@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import Navigation from './web/Gemdam/components/navigation/navigation';
 import Gemdam from './web/Gemdam/web/gemdam/gemdam';
@@ -13,6 +13,9 @@ import Contact from './web/Gemdam/web/contact/contact';
 
 import dataEN from './language/gemdam_en.json';
 import dataES from './language/gemdam_es.json';
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./globals.css"
 
@@ -28,21 +31,30 @@ export default function Homepage() {
 
   return (
     <main className="main">
-      <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
-      <Gemdam dataText={dataLanguage.gemdam} />
-      <Business dataText={dataLanguage.business} />
-      <Shader02 />
-      <Companies dataText={dataLanguage.companies} />
-      <About dataText={dataLanguage.about} />
-      <Shader03 />
-      <Contact dataText={dataLanguage.contact} />
+      {/* <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} /> */}
 
-      <div className='lines'>
+        <Gemdam dataText={dataLanguage.gemdam} />
+
+        <Business dataText={dataLanguage.business} />
+
+      {/* <Shader02 /> */}
+      <div className='snapScroll'>
+        <Companies dataText={dataLanguage.companies} />
+      </div>
+      <div className='snapScroll'>
+        <About dataText={dataLanguage.about} />
+      </div>
+      {/* <Shader03 /> */}
+      <div className='snapScroll'>
+        <Contact dataText={dataLanguage.contact} />
+      </div>
+
+      {/* <div className='lines'>
         <div className='line-1'></div>
         <div className='line-2'></div>
         <div className='line-3'></div>
         <div className='line-4'></div>
-      </div>
+      </div> */}
     </main>
   )
 }

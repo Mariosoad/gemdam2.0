@@ -7,7 +7,7 @@ export default function Business(props) {
     const dataBusiness = props.dataText;
 
     return (
-        <div className='container-business'>
+        <div className='container-business snapScroll'>
             <div className='back-tittle'><h2>{dataBusiness.title}</h2></div>
             <div className='child-container-business'>
                 <div className='subtittle-top mark-tittle'>
