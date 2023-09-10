@@ -8,7 +8,7 @@ export default function About(props) {
     const dataAbout = props.dataText;
 
     return (
-        <div className='container-about'>
+        <div className='container-about snapScroll'>
             <div className='back-tittle'><h2>{dataAbout.title}</h2></div>
             <div className='child-container-about'>
                 <div className='subtittle-top mark-tittle'>

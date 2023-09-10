@@ -69,7 +69,6 @@
 
     .container-companies {
         width: 860px;
-        height: 100vh;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -88,7 +87,6 @@
 
     .container-companies {
         width: 960px;
-        height: 100vh;
         margin: auto;
         display: flex;
         flex-direction: column;
