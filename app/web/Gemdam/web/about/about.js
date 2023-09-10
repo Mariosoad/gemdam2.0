@@ -11,7 +11,7 @@ export default function About(props) {
         <div className='container-about snapScroll'>
             <div className='back-tittle'><h2>{dataAbout.title}</h2></div>
             <div className='child-container-about'>
-                <div className='subtittle-top mark-tittle'>
+                <div className='subtittle-top top-position mark-tittle'>
                     <div className='sep-line-large'></div>
                     <p>{dataAbout.subtitle}</p>
                 </div>
@@ -47,6 +47,12 @@ export default function About(props) {
                         })}
                     </div>
                 </div>
+            </div>
+            <div className='lines'>
+                <div className='line-1'></div>
+                <div className='line-2'></div>
+                <div className='line-3'></div>
+                <div className='line-4'></div>
             </div>
         </div>
     )

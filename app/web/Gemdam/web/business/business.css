@@ -81,11 +81,17 @@
     }
 
     .child-qualities div {
-        width: 50%;
+        width: 25vh;
+        height: 25vh;
+        max-height: 160px;
+        max-width: 160px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .child-qualities h5 {
-        padding: 55px 0px;
         font-size: 0.8em;
         font-weight: 400;
         color: white;
@@ -168,7 +174,6 @@
     }
 
     .child-qualities h5 {
-        padding: 55px 0px;
         font-size: 0.8em;
         font-weight: 400;
         color: white;
@@ -278,11 +283,16 @@
     }
 
     .child-qualities div {
-        width: 50%;
+        width: 25vh;
+        height: 25vh;
+        max-height: 120px;
+        max-width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .child-qualities h5 {
-        padding: 45px 0px;
         font-size: 0.7em;
         font-weight: 400;
         color: white;
@@ -334,15 +344,16 @@
     }
 
     .child-qualities div {
-        width: 50%;
-        height: 100px;
+        width: 25vh;
+        height: 25vh;
+        max-height: 110px;
+        max-width: 110px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .child-qualities h5 {
-        padding: 0px;
         font-size: 0.7em;
         font-weight: 400;
         color: white;

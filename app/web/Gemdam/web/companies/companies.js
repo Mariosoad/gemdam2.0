@@ -11,7 +11,7 @@ export default function Companies(props) {
         <div className='container-companies snapScroll'>
             <div className='back-tittle'><h2>{dataCompanies.title}</h2></div>
             <div className='child-container-companies'>
-                <div className='subtittle-top mark-tittle'>
+                <div className='subtittle-top top-position mark-tittle'>
                     <div className='sep-line-large'></div>
                     <p>{dataCompanies.subtitle}</p>
                 </div>
@@ -33,6 +33,12 @@ export default function Companies(props) {
                         )
                     })}
                 </div>
+            </div>
+            <div className='lines'>
+                <div className='line-1'></div>
+                <div className='line-2'></div>
+                <div className='line-3'></div>
+                <div className='line-4'></div>
             </div>
         </div>
     )

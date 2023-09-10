@@ -7,7 +7,7 @@
     .container-navigation {
         position: fixed;
         width: 1000px;
-        height: 100vh;
+        height: auto !important;
         margin: auto;
         left: 0;
         right: 0;

@@ -30,22 +30,19 @@ export default function Homepage() {
   const dataLanguage = currentLanguage === 'en' ? dataEN : dataES;
 
   return (
-    <main className="main">
-      {/* <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} /> */}
-      <Gemdam dataText={dataLanguage.gemdam} />
-      <Business dataText={dataLanguage.business} />
-      {/* <Shader02 /> */}
-      <Companies dataText={dataLanguage.companies} />
-      <About dataText={dataLanguage.about} />
-      {/* <Shader03 /> */}
-      <Contact dataText={dataLanguage.contact} />
+    <div>
 
-      <div className='lines'>
-        <div className='line-1'></div>
-        <div className='line-2'></div>
-        <div className='line-3'></div>
-        <div className='line-4'></div>
-      </div>
-    </main>
+      <main className="main">
+        <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
+
+        <Gemdam dataText={dataLanguage.gemdam} />
+        <Business dataText={dataLanguage.business} />
+        {/* <Shader02 /> */}
+        <Companies dataText={dataLanguage.companies} />
+        <About dataText={dataLanguage.about} />
+        {/* <Shader03 /> */}
+        <Contact dataText={dataLanguage.contact} />
+      </main>
+    </div>
   )
 }

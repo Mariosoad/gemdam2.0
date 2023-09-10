@@ -82,14 +82,13 @@ a {
 .main {
   min-height: 100vh;
   max-width: 100%;
+  height: 100vh;
   width: 100%;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  height: 100vh;
-  
 }
 
 .snapScroll {
@@ -136,6 +135,7 @@ a {
 }
 
 .tittle-section {
+  width: 66%;
   font-size: 4.5em;
   font-weight: 600;
   line-height: 1em;
@@ -150,6 +150,11 @@ a {
   color: white;
   padding: 50px 7px 30px !important;
   position: relative;
+}
+
+.top-position {
+  position: absolute;
+  top: 0px;
 }
 
 .back-tittle {
@@ -235,6 +240,11 @@ a {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+  }
+
+  .tittle-section {
+    width: 68%;
+    font-size: 2.8em;
   }
 }
 
@@ -323,6 +333,11 @@ a {
     width: 960px;
     height: 100%;
   }
+
+  .tittle-section {
+    width: 75%;
+    font-size: 3.5em;
+  }
 }
 
 /** 
@@ -334,6 +349,11 @@ a {
   .lines {
     width: 1060px;
     height: 100%;
+  }
+
+  .tittle-section {
+    width: 75%;
+    font-size: 4em;
   }
 }
 
@@ -356,6 +376,16 @@ a {
     align-items: center;
     margin: auto;
   }
+
+  .tittle-section {
+    width: 66%;
+    font-size: 2.2em;
+    font-weight: 600;
+    line-height: 1em;
+    color: #2cddcf;
+    padding-bottom: 40px;
+    margin-left: -4px !important;
+  }
 }
 
 /** 
@@ -366,15 +396,6 @@ a {
 @media (max-width: 768px) {
   .lines {
     display: none;
-  }
-
-  .tittle-section {
-    font-size: 3em;
-    font-weight: 600;
-    line-height: 1em;
-    color: #2cddcf;
-    padding-bottom: 40px;
-    margin-left: -4px !important;
   }
 
   .tittle-description {
@@ -415,6 +436,7 @@ a {
  */
 @media (max-width: 520px) {
   .tittle-section {
+    width: 100%;
     font-size: 2em;
     font-weight: 600;
     line-height: 1em;

@@ -10,7 +10,7 @@ export default function Business(props) {
         <div className='container-business snapScroll'>
             <div className='back-tittle'><h2>{dataBusiness.title}</h2></div>
             <div className='child-container-business'>
-                <div className='subtittle-top mark-tittle'>
+                <div className='subtittle-top mark-tittle top-position'>
                     <div className='sep-line-large'></div>
                     <p>{dataBusiness.subtitle}</p>
                 </div>
@@ -59,6 +59,12 @@ export default function Business(props) {
                         })}
                     </div>
                 </div>
+            </div>
+            <div className='lines'>
+                <div className='line-1'></div>
+                <div className='line-2'></div>
+                <div className='line-3'></div>
+                <div className='line-4'></div>
             </div>
         </div>
     )

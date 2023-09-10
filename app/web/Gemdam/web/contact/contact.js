@@ -10,7 +10,7 @@ export default function Contact(props) {
         <div id='Contact' className='container-contact snapScroll'>
             <div className='back-tittle'><h2>{dataContact.title}</h2></div>
             <div className='child-container-contact'>
-                <div className='subtittle-top mark-tittle'>
+                <div className='subtittle-top top-position mark-tittle'>
                     <div className='sep-line-large'></div>
                     <p>{dataContact.subtitle}</p>
                 </div>
@@ -39,6 +39,12 @@ export default function Contact(props) {
                     <div><p>{dataContact.location}</p></div>
                     <div><p>{dataContact.copyright}</p></div>
                 </div>
+            </div>
+            <div className='lines'>
+                <div className='line-1'></div>
+                <div className='line-2'></div>
+                <div className='line-3'></div>
+                <div className='line-4'></div>
             </div>
         </div>
     )
