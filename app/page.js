@@ -14,9 +14,6 @@ import Contact from './web/Gemdam/web/contact/contact';
 import dataEN from './language/gemdam_en.json';
 import dataES from './language/gemdam_es.json';
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import "./globals.css"
 
 export default function Homepage() {
@@ -34,13 +31,12 @@ export default function Homepage() {
 
       <main className="main">
         <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
-
         <Gemdam dataText={dataLanguage.gemdam} />
         <Business dataText={dataLanguage.business} />
-        {/* <Shader02 /> */}
+        <Shader02 />
         <Companies dataText={dataLanguage.companies} />
         <About dataText={dataLanguage.about} />
-        {/* <Shader03 /> */}
+        <Shader02 />
         <Contact dataText={dataLanguage.contact} />
       </main>
     </div>
