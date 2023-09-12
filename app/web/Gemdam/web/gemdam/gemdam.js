@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Shader01 from '../../components/shaders/01/shader01';
 
 import "./gemdam.css"
 
@@ -70,12 +71,12 @@ export default function Gemdam(props) {
                         </div>
                     </div>
                 </div>
-                <div className='container-shader'>
-                    {/* <p>shader</p> */}
-                </div>
                 <div className='container-line'>
                     <div className="line-animation"></div>
                 </div>
+            </div>
+            <div className='container-shader'>
+                <Shader01 />
             </div>
         </div>
     )

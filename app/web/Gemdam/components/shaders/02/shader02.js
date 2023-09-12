@@ -7,6 +7,7 @@ export default function shader02() {
   return (
     <div className='container-shader02'>
       <ScriptShad />
+      <div className='container-grad'></div>
     </div>
   )
 }

@@ -33,7 +33,7 @@ export default function Homepage() {
         <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
         <Gemdam dataText={dataLanguage.gemdam} />
         <Business dataText={dataLanguage.business} />
-        <Shader02 />
+        <Shader03 />
         <Companies dataText={dataLanguage.companies} />
         <About dataText={dataLanguage.about} />
         <Shader02 />
