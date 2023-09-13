@@ -15,6 +15,7 @@ export default function Business(props) {
                     <p>{dataBusiness.subtitle}</p>
                 </div>
                 <h2 className='tittle-section'>{dataBusiness.titleDescription}</h2>
+                <br></br>
                 <div className='container-description'>
                     {dataBusiness.description.map((item, index) => {
                         return (

@@ -97,12 +97,6 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                     </div>
                     {/* MENU OVERLAY */}
                     <div className={navOpen ? "nav-overlay dis" : "nav-overlay"} style={{ top: navOpen ? "0" : "-100%", transitionDelay: navOpen ? "0s" : "0s" }}>
-                        <div style={{ filter: 'brightness(0.1)' }} className='lines'>
-                            <div className='line-1'></div>
-                            <div className='line-2'></div>
-                            <div className='line-3'></div>
-                            <div className='line-4'></div>
-                        </div>
                         <div className='container-overlay'>
                             <div className='tittle-menu'>
                                 <h2>MENU</h2>
@@ -121,6 +115,12 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                                     )
                                 })}
                             </div>
+                        </div>
+                        <div className='lines'>
+                            <div className='line-1'></div>
+                            <div className='line-2'></div>
+                            <div className='line-3'></div>
+                            <div className='line-4'></div>
                         </div>
                     </div>
                 </div>

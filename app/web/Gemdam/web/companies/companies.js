@@ -16,6 +16,7 @@ export default function Companies(props) {
                     <p>{dataCompanies.subtitle}</p>
                 </div>
                 <h2 className='tittle-section'>{dataCompanies.titleDescription}</h2>
+
                 <div className='container-logos'>
                     {dataCompanies.clients.map(l => {
                         return (
@@ -36,6 +37,8 @@ export default function Companies(props) {
             </div>
             <div className='lines'>
                 <div className='line-1'></div>
+                <div className='line-2'></div>
+                <div className='line-2'></div>
                 <div className='line-2'></div>
                 <div className='line-3'></div>
                 <div className='line-4'></div>

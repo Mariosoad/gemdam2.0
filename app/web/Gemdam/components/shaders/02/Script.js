@@ -29,7 +29,7 @@ const MovingPlane = () => {
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         uniforms={uniforms}
-        wireframe
+        // wireframe
       />
     </mesh>
   );

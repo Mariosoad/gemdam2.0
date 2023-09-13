@@ -140,7 +140,7 @@ a {
   font-weight: 600;
   line-height: 1em;
   color: #2cddcf;
-  padding-bottom: 70px;
+  padding-top: 40px;
   margin-left: -4px !important;
 }
 
@@ -159,7 +159,7 @@ a {
 
 .back-tittle {
   position: absolute;
-  top: 30%;
+  top: 12%;
   left: 0px;
   right: 0px;
   align-items: center;
@@ -194,20 +194,20 @@ a {
 
 .sep-line-short {
   width: 15px;
-  height: 2px;
-  background-color: #181818;
+  height: 1px;
+  background-color: #000000;
 }
 
 .sep-line-mid {
   width: 45px;
-  height: 2px;
-  background-color: #181818;
+  height: 1px;
+  background-color: #000000;
 }
 
 .sep-line-large {
   width: 60px;
-  height: 2px;
-  background-color: #181818;
+  height: 1px;
+  background-color: #000000;
 }
 
 .mark-tittle .sep-line-large {
@@ -245,6 +245,12 @@ a {
   .tittle-section {
     width: 68%;
     font-size: 2.8em;
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1em;
+    color: #2cddcf;
+    padding-top: 110px;
+    margin-left: 5px !important;
   }
 }
 
@@ -272,15 +278,6 @@ a {
     height: 100%;
   }
 
-  .tittle-section {
-    font-size: 3em;
-    font-weight: 600;
-    line-height: 1em;
-    color: #2cddcf;
-    padding-bottom: 40px;
-    margin-left: -4px !important;
-  }
-
   .subtittle-top {
     font-size: 0.8em;
     font-weight: 400;
@@ -290,14 +287,15 @@ a {
 
   .back-tittle {
     position: absolute;
-    top: 30%;
+    top: 12%;
     left: 0px;
     right: 0px;
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 4.5em;
+    font-size: 7.5em;
     font-weight: 900;
+    letter-spacing: 7px;
     background: #02020286;
     color: transparent;
     text-shadow: 0px 1px 3px rgba(20, 20, 20, 0.95);

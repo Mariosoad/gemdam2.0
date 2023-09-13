@@ -6,22 +6,8 @@ import vertexShader from "./shader/vertexShader.glsl";
 import fragmentShader from "./shader/fragmentShader.glsl";
 
 const MovingPlane = () => {
-  // This reference will give us direct access to the mesh
+  
   const mesh = useRef();
-
-  // const uniforms = useMemo(
-  //   () => ({
-  //     u_time: {
-  //       value: 0.0,
-  //     },
-  //   }), []
-  // );
-
-  // useFrame((state) => {
-  //   const { clock } = state;
-  //   mesh.current.material.uniforms.u_time.value = clock.getElapsedTime();
-  // });
-
 
   return (
     <mesh ref={mesh} position={[0.1, 0, -0.5]} rotation={[1, Math.PI / 3.5, -0.8]} scale={0.6}>
@@ -59,7 +45,7 @@ const ScriptShad = () => {
         distance={5}
         angle={1}
         attenuation={6}
-        anglePower={5} // Diffuse-cone anglePower (default: 5)
+        anglePower={5}
       />
     </Canvas>
   );

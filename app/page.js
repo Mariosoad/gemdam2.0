@@ -28,7 +28,6 @@ export default function Homepage() {
 
   return (
     <div>
-
       <main className="main">
         <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
         <Gemdam dataText={dataLanguage.gemdam} />
