@@ -64,8 +64,13 @@ float cnoise(vec2 P)
 void main()
 {
     // // Pattern 24
-     vec2 gridUv = vec2(floor(vUv.x * 40.0) / 40.0, floor(vUv.y * 40.0) / 40.0);
-     float strength = random(gridUv);
+     vec2 gridUv = vec2(floor(vUv.x * 20.0) / 20.0, floor(vUv.y * 20.0) / 20.0);
+    //  float strength = random(gridUv);
+    // float strength = max(abs(vUv.x - 0.5), abs(vUv.y - 0.5));
+    float angle = atan(vUv.x - 0.5, vUv.y - 0.5);
+    angle /= PI * 2.0;
+    angle += 0.5;
+    float strength = angle;
 
     // Final color
     vec3 blackColor = vec3(0.0);

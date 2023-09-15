@@ -65,7 +65,8 @@ void main()
 {
     // // Pattern 24
      vec2 gridUv = vec2(floor(vUv.x * 40.0) / 40.0, floor(vUv.y * 40.0) / 40.0);
-     float strength = random(gridUv);
+    //  float strength = random(gridUv);
+    float strength = max(abs(vUv.x - 0.5), abs(vUv.y - 0.5));
 
     // Final color
     vec3 blackColor = vec3(0.0);
@@ -73,7 +74,7 @@ void main()
     vec3 mixedColor = mix(blackColor, uvColor, strength);
 
     // gl_FragColor = vec4(vec3(strength), 1.0);
-    gl_FragColor = vec4(strength, strength, strength, 1.0);
+    gl_FragColor = vec4(strength, strength, strength, 2.0);
 }
 
 `
