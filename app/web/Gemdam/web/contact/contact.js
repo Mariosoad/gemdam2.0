@@ -15,29 +15,31 @@ export default function Contact(props) {
                     <p>{dataContact.subtitle}</p>
                 </div>
                 <h2 className='tittle-section'>{dataContact.titleDescription}</h2>
-                <div className='container-request mark-tittle'>
-                    <div className='sep-line-large'></div>
-                    <p>{dataContact.subtitleDescription}</p>
-                </div>
-                <div className='container-call'>
-                    {dataContact.call.map((item, index) => {
-                        return (
-                            <div key={index}>
-                                <a className='child-container-call' href={item.href} target='_blank'>
-                                    <div className='text-swap'>
-                                        <div className='cont-text-swap'>
-                                            <p>{item.tel}</p>
-                                            <p>{item.tel}</p>
+                <div className='container-items-contact'>
+                    <div className='container-request mark-tittle'>
+                        <div className='sep-line-large'></div>
+                        <p>{dataContact.subtitleDescription}</p>
+                    </div>
+                    <div className='container-call'>
+                        {dataContact.call.map((item, index) => {
+                            return (
+                                <div key={index}>
+                                    <a className='child-container-call' href={item.href} target='_blank'>
+                                        <div className='text-swap'>
+                                            <div className='cont-text-swap'>
+                                                <p>{item.tel}</p>
+                                                <p>{item.tel}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        )
-                    })}
-                </div>
-                <div className='container-direction'>
-                    <div><p>{dataContact.location}</p></div>
-                    <div><p>{dataContact.copyright}</p></div>
+                                    </a>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div className='container-direction'>
+                        <div><p>{dataContact.location}</p></div>
+                        <div><p>{dataContact.copyright}</p></div>
+                    </div>
                 </div>
             </div>
             <div className='lines'>

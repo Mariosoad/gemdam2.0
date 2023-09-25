@@ -55,6 +55,36 @@ p {
   position: relative;
 }
 
+h1::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
+h2::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
+h3::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
+h4::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
+h5::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
+p::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -79,16 +109,26 @@ a {
   text-decoration: none !important;
 }
 
+.gemdamstudio {
+  height: 100vh;
+
+}
+
 .main {
   min-height: 100vh;
-  max-width: 100%;
   height: 100vh;
+  max-width: 100%;
   width: 100%;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
+}
+
+.gemdamstudio .scroll {
+  height: 100%;
+  overflow: hidden;
 }
 
 .snapScroll {
@@ -141,20 +181,26 @@ a {
   line-height: 1em;
   color: #2cddcf;
   padding-top: 40px;
-  margin-left: -4px !important;
+  margin-left: 0px !important;
 }
 
 .subtittle-top {
   font-size: 0.8em;
   font-weight: 400;
   color: white;
-  padding: 50px 7px 30px !important;
+  padding: 50px 0px 30px !important;
   position: relative;
 }
 
 .top-position {
   position: absolute;
   top: 0px;
+}
+
+.mid-position {
+  position: absolute;
+  top: 77px;
+  left: 0px;
 }
 
 .back-tittle {
@@ -168,12 +214,7 @@ a {
   font-size: 5.5em;
   font-weight: 900;
   z-index: -4;
-  background: #02020286;
-  color: transparent;
-  text-shadow: 0px 1px 3px rgba(20, 20, 20, 0.95);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
+  color: #141414;
 }
 
 .tittle-description {
@@ -250,7 +291,7 @@ a {
     line-height: 1em;
     color: #2cddcf;
     padding-top: 110px;
-    margin-left: 5px !important;
+    margin-left: 0px !important;
   }
 }
 
@@ -282,7 +323,7 @@ a {
     font-size: 0.8em;
     font-weight: 400;
     color: white;
-    padding: 50px 7px 30px !important;
+    padding: 50px 0px 30px !important;
   }
 
   .back-tittle {
@@ -296,12 +337,6 @@ a {
     font-size: 7.5em;
     font-weight: 900;
     letter-spacing: 7px;
-    background: #02020286;
-    color: transparent;
-    text-shadow: 0px 1px 3px rgba(20, 20, 20, 0.95);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
   }
 
   .tittle-description {
@@ -313,7 +348,7 @@ a {
   }
 
   .text-description {
-    width: 80%;
+    width: 88%;
     font-size: 0.8em;
     font-weight: 300;
     color: white;
@@ -346,6 +381,16 @@ a {
 @media (min-width: 1920px) {
   .lines {
     width: 1060px;
+    height: 100%;
+  }
+
+  .container-companies .lines {
+    width: 1058px;
+    height: 100%;
+  }
+
+  .container-about .lines {
+    width: 1059px;
     height: 100%;
   }
 
@@ -382,7 +427,7 @@ a {
     line-height: 1em;
     color: #2cddcf;
     padding-bottom: 40px;
-    margin-left: -4px !important;
+    margin-left: -1px !important;
   }
 }
 
@@ -416,7 +461,7 @@ a {
     font-size: 0.8em;
     font-weight: 400;
     color: white;
-    padding: 20px 7px 30px !important;
+    padding: 20px 0px 30px !important;
   }
 
   .back-tittle {
@@ -424,6 +469,7 @@ a {
     font-weight: 900;
     transform: rotate(-90deg);
     top: 40%;
+    color: #141414;
   }
 }
 
@@ -440,7 +486,7 @@ a {
     line-height: 1em;
     color: #2cddcf;
     padding-bottom: 30px;
-    margin-left: -4px !important;
+    margin-left: -1px !important;
   }
 
   .tittle-description {
@@ -455,6 +501,6 @@ a {
     font-size: 0.8em;
     font-weight: 400;
     color: white;
-    padding: 20px 7px 30px !important;
+    padding: 20px 0px 30px !important;
   }
 }

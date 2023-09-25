@@ -30,6 +30,7 @@ export default function Business(props) {
                         )
                     })}
                 </div>
+                             <br></br>
                 <div className='subtittle-top mark-tittle'>
                     <div className='sep-line-large'></div>
                     <p>{dataBusiness.qualities.tittle}</p>

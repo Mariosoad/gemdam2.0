@@ -65,13 +65,13 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                 <div className="logo-gemdam logo-swap">
                     <div className={showGem ? 'cont-logo-swap' : 'swap'}>
                         <p className="tittle-gemdam">
-                            <Image width={40} height={40}
+                            <Image width={45} height={45}
                                 src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
-                            GEMDAM</p>
+                            </p>
                         <p className="tittle-gemdam">
-                            <Image width={40} height={40}
+                            <Image width={45} height={45}
                                 src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
-                            <span>GEMDAM</span></p>
+                            <span></span></p>
                     </div>
                 </div>
             </div>
@@ -127,9 +127,11 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
             </div>
 
             <div className="container-left-bottom">
-                <p>STUDIO</p>
-                <p>GEMDAM</p>
-                <p>PRODUCTION</p>
+                <div className='child-container-left-bottom'>
+                    <p>STUDIO</p>
+                    <p>GEMDAM</p>
+                    <p>PRODUCTION</p>
+                </div>
             </div>
 
             <div className="container-right-bottom">

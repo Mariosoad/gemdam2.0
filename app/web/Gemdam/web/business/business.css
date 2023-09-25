@@ -48,7 +48,7 @@
 
     .number {
         font-size: 0.8em !important;
-        font-weight: 600 !important;
+        font-weight: 300 !important;
         padding: 15px 0px;
         color: white;
         transform: rotate(-90deg);
@@ -85,10 +85,10 @@
     }
 
     .child-qualities div {
-        width: 25vh;
+        width: 50%;
         height: 25vh;
         max-height: 160px;
-        max-width: 160px;
+        max-width: 50%;
         position: relative;
         display: flex;
         align-items: center;
@@ -141,7 +141,6 @@
 
     .number {
         font-size: 0.8em !important;
-        font-weight: 600 !important;
         padding: 15px 0px;
         color: white;
         transform: rotate(-90deg);
@@ -250,7 +249,7 @@
 
     .number {
         font-size: 0.8em !important;
-        font-weight: 600 !important;
+        font-weight: 300 !important;
         padding: 15px 0px;
         color: white;
         transform: rotate(-90deg);
@@ -287,10 +286,10 @@
     }
 
     .child-qualities div {
-        width: 25vh;
+        width: 50%;
         height: 25vh;
         max-height: 120px;
-        max-width: 120px;
+        max-width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -348,7 +347,7 @@
     }
 
     .child-qualities div {
-        width: 25vh;
+        width: 50%;
         height: 25vh;
         max-height: 110px;
         max-width: 110px;

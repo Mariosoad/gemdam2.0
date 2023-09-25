@@ -4,6 +4,7 @@
     margin: auto;
     background-color: #121212;
     position: relative;
+    z-index: -1;
     /* margin: 40px 0px; */
 }
 

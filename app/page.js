@@ -27,8 +27,8 @@ export default function Homepage() {
   const dataLanguage = currentLanguage === 'en' ? dataEN : dataES;
 
   return (
-    <div>
-      <main className="main">
+    <div className='gemdamstudio '>
+      <main className="main scroll">
         <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
         <Gemdam dataText={dataLanguage.gemdam} />
         <Business dataText={dataLanguage.business} />

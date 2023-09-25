@@ -1,3 +1,8 @@
+.container-about p,
+h4 {
+    padding-left: 5px;
+}
+
 /** 
  * (min-width: 981px)
  *  
@@ -21,25 +26,29 @@
     }
 
     .container-team {
+        height: 700px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        padding-top: 60px;
+        row-gap: 30px;
     }
 
     .container-team .text-description,
-    h4,
-    h5 {
+    h4 {
         padding-left: 5px;
     }
 
     .container-text-team {
+        width: 99.9%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        border-bottom: 1px solid #181818;
-        padding-bottom: 50px;
+        border-bottom: 1px solid #000000;
+        margin-top: -20px;
+        padding-bottom: 45px;
     }
 
     .container-text-team div {
@@ -48,7 +57,7 @@
 
     .container-img-team {
         width: 100%;
-        padding-top: 50px;
+        padding-top: 20px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -80,9 +89,19 @@
         justify-content: space-between !important;
     }
 
+    .child-img-team .container-team-tittle h4 {
+        font-weight: 400;
+    }
+
     .child-img-team h4 {
         font-size: 1em;
-        font-weight: 500;
+        font-weight: 300;
+        color: white;
+    }
+
+    .child-img-team h4 {
+        font-size: 1em;
+        font-weight: 300;
         color: white;
     }
 
@@ -168,6 +187,7 @@
     }
 
     .container-team {
+        height: 700px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -229,7 +249,7 @@
 
     .child-img-team h4 {
         font-size: 1em;
-        font-weight: 500;
+        font-weight: 400;
         color: white;
     }
 
@@ -266,7 +286,6 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        border-bottom: 1px solid #181818;
         padding-bottom: 40px;
         row-gap: 30px;
     }
@@ -306,7 +325,6 @@
 
     .child-img-team h4 {
         font-size: 0.9em;
-        font-weight: 500;
         color: white;
     }
 
@@ -348,7 +366,6 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        border-bottom: 1px solid #181818;
         padding-bottom: 40px;
         row-gap: 30px;
     }
@@ -389,7 +406,6 @@
 
     .child-img-team h4 {
         font-size: 0.9em;
-        font-weight: 500;
         color: white;
     }
 

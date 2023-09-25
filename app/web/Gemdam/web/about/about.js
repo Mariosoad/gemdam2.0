@@ -40,7 +40,7 @@ export default function About(props) {
                                             <h4>{item.name}</h4>
                                             <div className='sep-line-large'></div>
                                         </div>
-                                        <h5>{item.role}</h5>
+                                        <h4>{item.role}</h4>
                                     </div>
                                 </div>
                             )
