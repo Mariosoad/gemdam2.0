@@ -126,11 +126,6 @@ a {
   scroll-snap-type: y proximity;
 }
 
-.gemdamstudio .scroll {
-  height: 100%;
-  overflow: hidden;
-}
-
 .snapScroll {
   scroll-snap-align: start;
 }
