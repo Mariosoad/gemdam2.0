@@ -77,13 +77,11 @@
     }
 
     .container-shader {
-        width: 120% !important;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 0px;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
     .container-line {
@@ -209,7 +207,7 @@
 
     .child-container-gemdam {
         width: 100%;
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -267,7 +265,7 @@
     }
 
     .container-shader {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -316,7 +314,7 @@
  */
 @media (max-width: 520px) {
     .container-gemdam {
-        width: 350px;
+        width: 325px;
         height: 100vh;
         margin: auto;
     }
@@ -336,7 +334,7 @@
     }
 
     .child-container-tittle h1 {
-        font-size: 3.5em;
+        font-size: 3em;
         line-height: 1em;
         color: #2cddcf;
     }

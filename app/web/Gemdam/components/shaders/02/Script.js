@@ -24,7 +24,7 @@ const MovingPlane = () => {
 
   return (
     <mesh ref={mesh} position={[0, 0, 0]} rotation={[0, Math.PI / 4, -0.5]} scale={1.5}>
-      <planeGeometry args={[10, 8, 128, 128]} />
+      <planeGeometry args={[10, 8, 7, 7]} />
       <shaderMaterial
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}

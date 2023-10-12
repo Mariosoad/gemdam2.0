@@ -385,7 +385,7 @@
     .container-navigation {
         position: fixed;
         width: 1160px;
-        height: 100vh;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -420,7 +420,7 @@
     .container-navigation {
         position: fixed;
         width: 1260px;
-        height: 100vh;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -455,7 +455,7 @@
     .container-navigation {
         position: fixed;
         width: 1360px;
-        height: 100vh;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -489,7 +489,7 @@
     .container-navigation {
         position: fixed;
         width: 1660px;
-        height: 100vh;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -524,7 +524,7 @@
     .container-navigation {
         position: fixed;
         width: 860px;
-        height: 100vh;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -881,7 +881,7 @@
     .container-navigation {
         position: fixed;
         width: 660px;
-        height: 100vh;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -971,8 +971,8 @@
 
     .container-navigation {
         position: fixed;
-        width: 350px;
-        height: 100vh;
+        width: 340px;
+        height: auto;
         margin: auto;
         left: 0;
         right: 0;
@@ -981,6 +981,16 @@
     .child-link-menu:hover::before {
         width: 48%;
         left: 10%;
+    }
+
+    /* ----------------------- */
+    /* ----- NAV MENU */
+    /* ----------------------- */
+    .container-menu {
+        position: fixed;
+        top: 15px;
+        right: 25px;
+        z-index: 2;
     }
 
 }

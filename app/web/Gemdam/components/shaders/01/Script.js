@@ -1,54 +1,117 @@
-import React, { useRef, useMemo } from 'react';
-import { Center, Decal, GradientTexture, OrbitControls, SpotLight, Text3D } from "@react-three/drei";
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { OrbitControls, useFBO, Center, Text3D } from "@react-three/drei";
+import { Canvas, useFrame, extend, createPortal } from "@react-three/fiber";
+import { useMemo, useRef } from "react";
+import * as THREE from "three";
+// import './scene.css';
 
-import vertexShader from "./shader/vertexShader.glsl";
-import fragmentShader from "./shader/fragmentShader.glsl";
+import SimulationMaterial from './SimulationMaterial';
 
-const MovingPlane = () => {
-  
-  const mesh = useRef();
+import vertexShader from './shader/vertexShader';
+import fragmentShader from './shader/fragmentShader';
+
+extend({ SimulationMaterial: SimulationMaterial });
+
+const FBOParticles = () => {
+  const size = 128;
+
+  const points = useRef();
+  const simulationMaterialRef = useRef();
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 1 / Math.pow(2, 53), 1);
+  const positions = new Float32Array([-1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0]);
+  const uvs = new Float32Array([0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0]);
+
+  const renderTarget = useFBO(size, size, {
+    minFilter: THREE.NearestFilter,
+    magFilter: THREE.NearestFilter,
+    format: THREE.RGBAFormat,
+    stencilBuffer: false,
+    type: THREE.FloatType,
+  });
+
+  const particlesPosition = useMemo(() => {
+    const length = size * size;
+    const particles = new Float32Array(length * 3);
+    for (let i = 0; i < length; i++) {
+      let i3 = i * 3;
+      particles[i3 + 0] = (i % size) / size;
+      particles[i3 + 1] = i / size / size;
+    }
+    return particles;
+  }, [size]);
+
+  const uniforms = useMemo(() => ({
+    uPositions: {
+      value: null,
+    }
+  }), [])
+
+  useFrame((state) => {
+    const { gl, clock } = state;
+
+    gl.setRenderTarget(renderTarget);
+    gl.clear();
+    gl.render(scene, camera);
+    gl.setRenderTarget(null);
+
+    points.current.material.uniforms.uPositions.value = renderTarget.texture;
+
+    simulationMaterialRef.current.uniforms.uTime.value = clock.elapsedTime;
+  });
 
   return (
-    <mesh ref={mesh} position={[0.1, 0, -0.5]} rotation={[1, Math.PI / 3.5, -0.8]} scale={0.6}>
-      <Center rotation={[-0.4, 3.0, 0]}>
-        <Text3D
-          curveSegments={64}
-          bevelEnabled
-          bevelSize={0.04}
-          bevelThickness={0.1}
-          height={0.5}
-          lineHeight={0.5}
-          letterSpacing={-0.06}
-          size={3.5}
-          font="/Lexend_Bold.json">
-          {`G`}
-          <meshDepthMaterial
-            // wireframe
-            bevelEnabled
-            fragmentShader={fragmentShader}
-            vertexShader={vertexShader}
-          // uniforms={uniforms}
+    <>
+      {createPortal(
+        <mesh>
+          <simulationMaterial ref={simulationMaterialRef} args={[size]} />
+          <bufferGeometry>
+            <bufferAttribute
+              attach="attributes-position"
+              count={positions.length / 3}
+              array={positions}
+              itemSize={3}
+            />
+            <bufferAttribute
+              attach="attributes-uv"
+              count={uvs.length / 2}
+              array={uvs}
+              itemSize={2}
+            />
+          </bufferGeometry>
+        </mesh>,
+        scene
+      )}
+      <points ref={points}>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={particlesPosition.length / 3}
+            array={particlesPosition}
+            itemSize={3}
           />
-        </Text3D>
-      </Center>
-    </mesh>
+        </bufferGeometry>
+        <shaderMaterial
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+          fragmentShader={fragmentShader}
+          vertexShader={vertexShader}
+          uniforms={uniforms}
+        />
+      </points>
+    </>
   );
 };
 
-const ScriptShad = () => {
+const Scene = () => {
   return (
-    <Canvas camera={{ position: [1.0, -0.1, 1.0] }}>
-      <MovingPlane />
+    <Canvas camera={{ position: [1.5, 1.5, 1.5] }}>
+      <ambientLight intensity={0.5} />
+      <FBOParticles />
+      {/* <BasicParticles /> */}
       {/* <OrbitControls /> */}
-      <SpotLight
-        distance={5}
-        angle={1}
-        attenuation={6}
-        anglePower={5}
-      />
     </Canvas>
   );
 };
 
-export default ScriptShad;
+export default Scene;
