@@ -24,9 +24,10 @@
     }
 
     .container-description {
+        height: 100%;
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -88,7 +89,7 @@
         width: 50%;
         height: 25vh;
         max-height: 160px;
-        max-width: 50%;
+        max-width: 65%;
         position: relative;
         display: flex;
         align-items: center;
@@ -100,6 +101,150 @@
         font-weight: 400;
         color: white;
     }
+
+    /*CROSS HOVER*/
+    .z-cross {
+        position: relative;
+        z-index: 1 !important;
+    }
+
+    .hover-cross {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .hover-cross .child-qualities {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cross-select div {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hover-cross div {
+        width: 100% !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .container-plus {
+        animation: fadeIn 2s;
+        position: relative;
+    }
+
+    /* .left,
+    .middle,
+    .right {
+        cursor: none;
+    } */
+
+    /* .left:hover~.middle {
+        background: #0000000b;
+    }
+
+    .left:hover~.right {
+        background: #0000000b;
+    }
+
+    .middle:hover~.left {
+        background: #0000000b;
+    }
+
+    .middle:hover+.right {
+        background: #0000000b;
+    }
+
+    .right:hover~.left {
+        background: #0000000b;
+    }
+
+    .right:hover~.middle {
+        background: #0000000b;
+    } */
+
+    /* .left:hover {
+        box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+        -webkit-box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+        -moz-box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+
+    }
+
+    .middle:hover {
+        box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+        -webkit-box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+        -moz-box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+    }
+
+    .right:hover {
+        box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+        -webkit-box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+        -moz-box-shadow: -39px 2px 55px -34px rgba(0, 0, 0, 0.59) inset;
+    } */
+
+    .plus {
+        width: 100px !important;
+        height: 100px !important;
+        background: linear-gradient(to bottom, transparent 45%, #2cddcf 40%, #2cddcf 55%, transparent 55%), linear-gradient(to right, transparent 45%, #2cddcf 45%, #2cddcf 55%, transparent 55%);
+        animation: pulse 5s infinite;
+        position: absolute;
+        z-index: 9999999;
+    }
+
+    .plus:hover {
+        /* background: linear-gradient(to bottom, transparent 45%, #ffffff 40%, #ffffff 55%, transparent 55%), linear-gradient(to right, transparent 45%, #ffffff 45%, #ffffff 55%, transparent 55%); */
+        background: #ffffffc8;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        60% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    /*CROSS HOVER*/
+
 }
 
 /** 
@@ -300,6 +445,130 @@
         font-weight: 400;
         color: white;
     }
+
+
+    /*CROSS HOVER*/
+    .z-cross {
+        position: relative;
+        z-index: 1 !important;
+        display: none !important;
+    }
+
+    .hover-cross {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .hover-cross .child-qualities {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cross-select div {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hover-cross div {
+        width: 100% !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .container-plus {
+        animation: fadeIn 2s;
+        position: relative;
+    }
+
+    .left,
+    .middle,
+    .right {
+        cursor: none;
+    }
+
+    .left:hover {
+        background: #0000000b;
+    }
+
+    .middle:hover {
+        background: #0000000b;
+    }
+
+    .right:hover {
+        background: #0000000b;
+    }
+
+    .plus {
+        width: 100px !important;
+        height: 100px !important;
+        background: linear-gradient(to bottom, transparent 45%, #2cddcf 40%, #2cddcf 55%, transparent 55%), linear-gradient(to right, transparent 45%, #2cddcf 45%, #2cddcf 55%, transparent 55%);
+        animation: pulse 5s infinite;
+        position: absolute;
+        z-index: 9999999;
+        display: none !important;
+    }
+
+    .plus:hover {
+        background: linear-gradient(to bottom, transparent 45%, #ffffff 40%, #ffffff 55%, transparent 55%), linear-gradient(to right, transparent 45%, #ffffff 45%, #ffffff 55%, transparent 55%);
+        display: none !important;
+    }
+
+    .dontPlus {
+        width: 60px !important;
+        height: 60px !important;
+        background: linear-gradient(to bottom, transparent 45%, #2cddcf 40%, #2cddcf 55%, transparent 55%), linear-gradient(to right, transparent 45%, #2cddcf 45%, #2cddcf 55%, transparent 55%);
+        animation: pulse 5s infinite;
+        position: absolute;
+        z-index: 9999999;
+    }
+
+    .dontPlus:hover {
+        background: linear-gradient(to bottom, transparent 45%, #ffffff 40%, #ffffff 55%, transparent 55%), linear-gradient(to right, transparent 45%, #ffffff 45%, #ffffff 55%, transparent 55%);
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        60% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    /*CROSS HOVER*/
 }
 
 /** 
@@ -375,6 +644,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border-top: 1px solid #000000;
+        border-top: none;
+    }
+
+    .number {
+        padding: 10px 0px 10px;
     }
 }

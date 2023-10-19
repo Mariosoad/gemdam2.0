@@ -53,6 +53,7 @@ p {
   margin: 0px !important;
   z-index: 2;
   position: relative;
+  pointer-events: none !important;
 }
 
 h1::selection {
@@ -85,10 +86,16 @@ p::selection {
   color: #000000;
 }
 
+span::selection {
+  background: #2cddcf;
+  color: #000000;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: crosshair;
 }
 
 html {
@@ -142,7 +149,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  z-index: 1;
+  z-index: -1;
 }
 
 .line-1 {
@@ -424,6 +431,10 @@ a {
     padding-bottom: 40px;
     margin-left: -1px !important;
   }
+
+  .mark-tittle .sep-line-large {
+    display: none;
+  }
 }
 
 /** 
@@ -485,7 +496,7 @@ a {
   }
 
   .tittle-description {
-    padding: 15px 5px 15px;
+    padding: 10px 5px 5px !important;
     font-size: 1em;
     font-weight: 500;
     color: white;

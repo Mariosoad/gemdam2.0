@@ -32,13 +32,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./logo-gemdam.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Gemdam Studio</title>
-        <meta name="description" content="La mejor empresa del mundo junto al Rodri multimedial" />
-        <meta name="keywords" content="webs, tu hermana virtual y ar" />
-        <link rel="canonical" href="https://www.maxiviajes.com.ar" />
+        <meta name="description" content="Nuestro equipo multidisciplinario de profesionales está enfocado en llevar a cabo soluciones tecnológicas innovadoras, que contribuyan a crear un futuro digital y cognitivo." />
+        <meta name="keywords" content="Realidad Virtual, VR, virtual reality, augmented reality, Realdad Aumentada, AR, experience, nultimedia, diseño, design, simulator, environment, desarrollo web, website, 3D, react, gaming, videojuegos, archviz, arquitectura, recorrido, software" />
+        <link rel="canonical" href="https://www.gemdam.com" />
         <link rel="alternate" hreflang="es" href="https://www.briptravel.com" />
-        <link rel="alternate" hreflang="en" href="https://briptravel.com" />
+        <link rel="alternate" hreflang="en" href="https://gemdam.com" />
         <meta name="robots" content="index,follow" />
-        <link rel="sitemap" type="application/xml" href="https://briptravel.com/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" href="https://gemdam.com/sitemap.xml" />
 
       </head>
       <body className={`${lexend.variable} ${roboto.variable}`}>

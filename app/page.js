@@ -11,6 +11,8 @@ import About from './web/Gemdam/web/about/about';
 import Shader03 from './web/Gemdam/components/shaders/03/shader03';
 import Contact from './web/Gemdam/web/contact/contact';
 
+import Mouse from './web/Gemdam/mouse';
+
 import dataEN from './language/gemdam_en.json';
 import dataES from './language/gemdam_es.json';
 
@@ -28,14 +30,15 @@ export default function Homepage() {
 
   return (
     <div className='gemdamstudio '>
+      <Mouse />
       <main className="main scroll">
         <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
         <Gemdam dataText={dataLanguage.gemdam} />
         <Business dataText={dataLanguage.business} />
-        <Shader02 />
+        {/* <Shader02 /> */}
         <Companies dataText={dataLanguage.companies} />
         <About dataText={dataLanguage.about} />
-        <Shader03 />
+        {/* <Shader03 /> */}
         <Contact dataText={dataLanguage.contact} />
       </main>
     </div>
