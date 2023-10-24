@@ -23,7 +23,7 @@ export default function Contact(props) {
                     <div className='container-call'>
                         {dataContact.call.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div key={index} className='child-call'>
                                     <a className='child-container-call' href={item.href} target='_blank'>
                                         <div className='text-swap'>
                                             <div className='cont-text-swap'>

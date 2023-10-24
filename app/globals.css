@@ -443,8 +443,17 @@ a {
  * -------------------------------------------------------------------
  */
 @media (max-width: 768px) {
+
+  .snapScroll {
+    scroll-snap-align: inherit;
+  }
+
   .lines {
     display: none;
+  }
+
+  .tittle-section {
+    padding-top: 20px;
   }
 
   .tittle-description {
@@ -474,8 +483,15 @@ a {
     font-size: 4.5em;
     font-weight: 900;
     transform: rotate(-90deg);
-    top: 40%;
+    top: 55%;
     color: #141414;
+  }
+
+  .top-position {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
   }
 }
 

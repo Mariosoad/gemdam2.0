@@ -96,7 +96,7 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                         </button>
                     </div>
                     {/* MENU OVERLAY */}
-                    <div className={navOpen ? "nav-overlay dis" : "nav-overlay"} style={{ top: navOpen ? "0" : "-100%", transitionDelay: navOpen ? "0s" : "0s" }}>
+                    <div className={navOpen ? "nav-overlay dis" : "nav-overlay"} style={{ top: navOpen ? "0" : "-150%", transitionDelay: navOpen ? "0s" : "0s" }}>
                         <div className='container-overlay'>
                             <div className='tittle-menu'>
                                 <h2>MENU</h2>
