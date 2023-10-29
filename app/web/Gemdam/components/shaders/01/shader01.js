@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Scene from './Script'
+// import Scene from './Script'
+import Scene from './elipseShader/SceneElipse'
 import './shader01.css'
 
 export default function shader01() {

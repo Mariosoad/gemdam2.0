@@ -109,6 +109,18 @@ body {
   margin: auto;
   align-items: center;
   background: #121212;
+
+  /* Custom styles for your React previews here */
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  color: currentColor;
+
 }
 
 a {

@@ -1,8 +1,9 @@
-import { OrbitControls, useFBO, Center, Text3D } from "@react-three/drei";
+"use client"
+
+import { useFBO } from "@react-three/drei";
 import { Canvas, useFrame, extend, createPortal } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
-// import './scene.css';
 
 import SimulationMaterial from './SimulationMaterial';
 
@@ -108,8 +109,6 @@ const Scene = () => {
     <Canvas camera={{ position: [1.5, 1.5, 1.5] }}>
       <ambientLight intensity={0.5} />
       <FBOParticles />
-      {/* <BasicParticles /> */}
-      {/* <OrbitControls /> */}
     </Canvas>
   );
 };
