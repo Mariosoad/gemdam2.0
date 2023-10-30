@@ -6,10 +6,13 @@ import { MathUtils } from "three";
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
 
+import { useMediaQuery } from 'react-responsive'
+
 const Blob = () => {
     // This reference will give us direct access to the mesh
     const mesh = useRef();
     const hover = useRef(false);
+    const isMobile = useMediaQuery({ query: '(max-width: 980px)' })
 
     const uniforms = useMemo(
         () => ({
@@ -27,11 +30,14 @@ const Blob = () => {
         const { clock } = state;
         mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
 
-        mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
-            mesh.current.material.uniforms.u_intensity.value,
-            hover.current ? 0.85 : 0.15,
+        !isMobile ? (mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(mesh.current.material.uniforms.u_intensity.value,
+            hover.current ? 0.85 : 0.55,
             0.02
-        );
+        )) : (mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
+            mesh.current.material.uniforms.u_intensity.value,
+            hover.current ? 0.45 : 0.85,
+            0.02
+        ))
     });
 
     return (
@@ -41,9 +47,13 @@ const Blob = () => {
             scale={1.5}
             onPointerOver={() => (hover.current = true)}
             onPointerOut={() => (hover.current = false)}
+            roughness={0.1}
+            metalness={0.1}
+            castShadow receiveShadow
         >
-            <icosahedronGeometry args={[2.2, 40]} />
+            <icosahedronGeometry receiveShadow args={[isMobile ? 2.3 : 2.2, 40]} />
             <shaderMaterial
+                color={"#2cddcf"}
                 fragmentShader={fragmentShader}
                 vertexShader={vertexShader}
                 uniforms={uniforms}
@@ -54,11 +64,22 @@ const Blob = () => {
 };
 
 const Scene = () => {
+
     return (
-        <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
+        <Canvas camera={{ position: [0.0, 0.0, 8.0] }}
+            colorManagement
+            shadowMap
+        >
             <Blob />
-            {/* <axesHelper /> */}
-            {/* <OrbitControls /> */}
+            <fog attach="fog" args={["black", 0, 40]} />
+            <ambientLight color={"#2cddcf"} intensity={0.1} />
+            <directionalLight
+                color={"#2cddcf"}
+                intensity={1}
+                castShadow
+                shadow-mapSize-height={512}
+                shadow-mapSize-width={512}
+            />
         </Canvas>
     );
 };

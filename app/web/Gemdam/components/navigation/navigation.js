@@ -27,6 +27,28 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
         };
     }, []);
 
+    const [isNavbarHidden, setIsNavbarHidden] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+
+            if (currentScrollPos > 100) {
+                setIsNavbarHidden(currentScrollPos > prevScrollPos);
+                setPrevScrollPos(currentScrollPos);
+            } else {
+                setIsNavbarHidden(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos]);
+
     const dataLinks = [
         {
             id: "01",
@@ -59,15 +81,16 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
         const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
         onChangeLanguage(newLanguage);
     };
+
     return (
-        <div className='container-navigation'>
+        <div className={`container-navigation ${isNavbarHidden ? 'hidden-navbar' : 'set-navbar'}`}>
             <div className="container-logo-gemdam">
                 <div className="logo-gemdam logo-swap">
                     <div className={showGem ? 'cont-logo-swap' : 'swap'}>
                         <p className="tittle-gemdam">
                             <Image width={45} height={45}
                                 src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
-                            </p>
+                        </p>
                         <p className="tittle-gemdam">
                             <Image width={45} height={45}
                                 src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />

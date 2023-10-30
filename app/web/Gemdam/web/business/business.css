@@ -589,6 +589,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        padding-bottom: 40px;
         row-gap: 20px;
     }
 
@@ -611,15 +612,15 @@
  */
 @media (max-width: 520px) {
     .container-business {
-        width: 350px;
+        width: 325px;
         margin: auto;
     }
 
     .child-qualities div {
-        width: 50%;
+        width: 100%;
         height: 25vh;
         max-height: 110px;
-        max-width: 110px;
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -629,6 +630,7 @@
         font-size: 0.7em;
         font-weight: 400;
         color: white;
+        letter-spacing: 1px;
     }
 
     .child-container-qualities {

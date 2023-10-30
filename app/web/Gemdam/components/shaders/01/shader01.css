@@ -1,4 +1,4 @@
-    .container-shader01 {
+.container-shader01 {
     width: 1200px;
     height: 100vh;
     margin: auto;
@@ -9,7 +9,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     position: absolute;
-    left: 35%;   
+    left: 35%;
 }
 
 .container-grad {
@@ -25,6 +25,18 @@
 canvas {
     width: 100%;
     height: 100%;
+}
+
+/** 
+ * (min-width: 1336px)
+ *  
+ * -------------------------------------------------------------------
+ */
+@media (min-width: 1336px) {
+    .container-shader01 {
+        left: 25%;
+    }
+
 }
 
 /** 
@@ -46,7 +58,7 @@ canvas {
 @media (max-width: 980px) {
     .container-shader01 {
         width: 100%;
-        height: 350px;
+        height: 360px;
         position: relative;
         left: 0;
     }

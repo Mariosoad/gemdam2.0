@@ -135,7 +135,7 @@ a {
 
 .main {
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
   max-width: 100%;
   width: 100%;
   position: relative;
@@ -515,7 +515,7 @@ a {
 @media (max-width: 520px) {
   .tittle-section {
     width: 100%;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 600;
     line-height: 1em;
     color: #2cddcf;
