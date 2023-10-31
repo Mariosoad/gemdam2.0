@@ -135,7 +135,7 @@ a {
 
 .main {
   min-height: 100vh;
-  height: auto;
+  height: 100vh;
   max-width: 100%;
   width: 100%;
   position: relative;
@@ -455,6 +455,12 @@ a {
  * -------------------------------------------------------------------
  */
 @media (max-width: 768px) {
+  .main {
+    min-height: 100vh;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
 
   .snapScroll {
     scroll-snap-align: inherit;
