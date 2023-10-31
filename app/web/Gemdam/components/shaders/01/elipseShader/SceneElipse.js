@@ -3,7 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import { MathUtils, TubeGeometry } from "three";
 
-import Model from "./model/model";
+// import Model from "./model/model";
 
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
