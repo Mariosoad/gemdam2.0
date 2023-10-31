@@ -67,14 +67,14 @@ float snoise(vec3 v)
   float n_ = 0.142857142857; // 1.0/7.0
   vec3  ns = n_ * D.wyz - D.xzx;
 
-  vec4 j = p - 49.0 * floor(p * ns.z * ns.z);  //  mod(p,7*7)
+  vec4 j = p - 39.0 * floor(p * ns.z * ns.z);  //  mod(p,7*7)
 
   vec4 x_ = floor(j * ns.z);
   vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
 
   vec4 x = x_ *ns.x + ns.yyyy;
   vec4 y = y_ *ns.x + ns.yyyy;
-  vec4 h = 1.0 - abs(x) - abs(y);
+  vec4 h = 4.0 - abs(x) - abs(y);
 
   vec4 b0 = vec4( x.xy, y.xy );
   vec4 b1 = vec4( x.zw, y.zw );
@@ -103,7 +103,7 @@ float snoise(vec3 v)
 // Mix final noise value
   vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
   m = m * m;
-  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+  return 12.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
                                 dot(p2,x2), dot(p3,x3) ) );
   }
 
@@ -111,8 +111,8 @@ float snoise(vec3 v)
 vec3 snoiseVec3( vec3 x ){
 
   float s  = snoise(vec3( x ));
-  float s1 = snoise(vec3( x.y - 19.1 , x.z + 33.4 , x.x + 47.2 ));
-  float s2 = snoise(vec3( x.z + 74.2 , x.x - 124.5 , x.y + 99.4 ));
+  float s1 = snoise(vec3( x.y - 12.1 , x.z + 13.4 , x.x + 37.2 ));
+  float s2 = snoise(vec3( x.z + 14.2 , x.x - 114.5 , x.y + 69.4 ));
   vec3 c = vec3( s , s1 , s2 );
   return c;
 
@@ -120,25 +120,27 @@ vec3 snoiseVec3( vec3 x ){
 
 
 vec3 curlNoise( vec3 p ){
-  
-  const float e = .1;
-  vec3 dx = vec3( e   , 0.0 , 0.0 );
-  vec3 dy = vec3( 0.0 , e   , 0.0 );
-  vec3 dz = vec3( 0.0 , 0.0 , e   );
 
-  vec3 p_x0 = snoiseVec3( p - dx );
-  vec3 p_x1 = snoiseVec3( p + dx );
-  vec3 p_y0 = snoiseVec3( p - dy );
-  vec3 p_y1 = snoiseVec3( p + dy );
-  vec3 p_z0 = snoiseVec3( p - dz );
-  vec3 p_z1 = snoiseVec3( p + dz );
+  const float e = 0.1;
+  vec3 dx = vec3(e, 0.0, 0.0);
+  vec3 dy = vec3(0.0, e, 0.0);
+  vec3 dz = vec3(0.0, 0.0, e);
 
-  float x = p_y1.z - p_y0.z - p_z1.y + p_z0.y;
-  float y = p_z1.x - p_z0.x - p_x1.z + p_x0.z;
-  float z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;
+  // Use different offsets and weights for each dimension
+  vec3 p_x0 = snoiseVec3(p - dx);
+  vec3 p_x1 = snoiseVec3(p + dx);
+  vec3 p_y0 = snoiseVec3(p - dy);
+  vec3 p_y1 = snoiseVec3(p + dy);
+  vec3 p_z0 = snoiseVec3(p - dz);
+  vec3 p_z1 = snoiseVec3(p + dz);
 
-  const float divisor = 1.0 / ( 2.0 * e );
-  return normalize( vec3( x , y , z ) * divisor );
+  // Calculate gradients with different weights
+  float x = (p_x1.y - p_x0.y) - (p_y1.x - p_y0.x);
+  float y = (p_y1.z - p_y0.z) - (p_z1.y - p_z0.y);
+  float z = (p_z1.x - p_z0.x) - (p_x1.z - p_x0.z);
+
+  const float divisor = 1.0 / (2.0 * e);
+  return normalize(vec3(x, y, z) * divisor);
 
 }
 

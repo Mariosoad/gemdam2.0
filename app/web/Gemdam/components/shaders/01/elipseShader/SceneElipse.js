@@ -1,7 +1,9 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Tube } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
-import { MathUtils } from "three";
+import { MathUtils, TubeGeometry } from "three";
+
+import Model from "./model/model";
 
 import vertexShader from './vertexShader';
 import fragmentShader from './fragmentShader';
@@ -31,7 +33,7 @@ const Blob = () => {
         mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
 
         !isMobile ? (mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(mesh.current.material.uniforms.u_intensity.value,
-            hover.current ? 0.85 : 0.55,
+            hover.current ? 0.85 : 0.05,
             0.02
         )) : (mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
             mesh.current.material.uniforms.u_intensity.value,
@@ -40,26 +42,55 @@ const Blob = () => {
         ))
     });
 
+
     return (
-        <mesh
-            ref={mesh}
-            position={[0, 0, 0]}
-            scale={1.5}
-            onPointerOver={() => (hover.current = true)}
-            onPointerOut={() => (hover.current = false)}
-            roughness={0.1}
-            metalness={0.1}
-            castShadow receiveShadow
-        >
-            <icosahedronGeometry receiveShadow args={[isMobile ? 2.3 : 2.2, 40]} />
-            <shaderMaterial
-                color={"#2cddcf"}
-                fragmentShader={fragmentShader}
-                vertexShader={vertexShader}
-                uniforms={uniforms}
-                wireframe={false}
-            />
-        </mesh>
+        <group>
+            <mesh
+                ref={mesh}
+                position={[0, 0, 0]}
+                scale={1.5}
+                onPointerOver={() => (hover.current = true)}
+                onPointerOut={() => (hover.current = false)}
+                castShadow receiveShadow
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 2.3, 2, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={true}
+                />
+            </mesh>
+            <mesh
+                ref={mesh}
+                position={[2.4, 2.4, 2.4]}
+                scale={1.0}
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.8, 1, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={true}
+                />
+            </mesh>
+            <mesh
+                ref={mesh}
+                position={[3.5, -1.5, 1.2]}
+                scale={1.0}
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.8, 1, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={true}
+                />
+            </mesh>
+        </group>
     );
 };
 
@@ -70,9 +101,10 @@ const Scene = () => {
             colorManagement
             shadowMap
         >
+            <OrbitControls />
             <Blob />
             <fog attach="fog" args={["black", 0, 40]} />
-            <ambientLight color={"#2cddcf"} intensity={0.1} />
+            <ambientLight color={"#2cddcf"} intensity={1.0} />
             <directionalLight
                 color={"#2cddcf"}
                 intensity={1}
