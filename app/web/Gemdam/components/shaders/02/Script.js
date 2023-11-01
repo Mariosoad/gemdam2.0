@@ -12,7 +12,7 @@ const MovingPlane = () => {
   const uniforms = useMemo(
     () => ({
       u_time: {
-        value: 0.0,
+        value: 0.2,
       },
     }), []
   );
@@ -23,8 +23,8 @@ const MovingPlane = () => {
   });
 
   return (
-    <mesh ref={mesh} position={[0, 0, 0]} rotation={[0, Math.PI / 4, -0.5]} scale={1.5}>
-      <planeGeometry args={[10, 8, 7, 7]} />
+    <mesh ref={mesh} position={[0, 0, 0]} rotation={[0, Math.PI / 4, -0.5]} scale={4.5}>
+      <planeGeometry args={[8, 8, 60, 60]} />
       <shaderMaterial
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}

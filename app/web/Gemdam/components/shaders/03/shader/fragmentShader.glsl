@@ -255,7 +255,7 @@ void main()
     // float strength = step(0.9, sin(cnoise(vUv * 1.0) * 20.0));
 
 // Color en formato hexadecimal #2cddcf
-vec3 desiredColor = vec3(44.0 / 255.0, 221.0 / 255.0, 207.0 / 255.0);
+vec3 desiredColor = vec3(0.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0);
 //vec3 desiredColor = vec3(0.0);
 
 // Final color
@@ -263,7 +263,7 @@ vec3 blackColor = vec3(0.0);
 vec3 uvColor = vec3(vUv, 0.0);
 vec3 mixedColor = mix(blackColor, desiredColor, strength);
 
-gl_FragColor = vec4(mixedColor, 1.0);
+gl_FragColor = vec4(mixedColor, 0.8);
 }
 
 `

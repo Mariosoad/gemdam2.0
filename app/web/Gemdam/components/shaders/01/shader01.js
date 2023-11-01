@@ -8,7 +8,7 @@ import './shader01.css'
 
 export default function shader01() {
   return (
-    <div className='container-shader01'>
+    <div className='container-shader01 shaderman'>
       <Scene />
       {/* <ShaderParticles /> */}
       {/* <div className='container-grad'></div> */}

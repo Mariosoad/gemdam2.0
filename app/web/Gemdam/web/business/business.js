@@ -81,7 +81,7 @@ export default function Business(props) {
                             <div className={isLeftHovered ? "cross-select container-plus" : "cross-select"}>
                                 <div><a href='https://www.google.com' target='_blank' className={isLeftHovered ? "plus" : ""}></a></div>
                             </div>
-                            <div className='qualities-left-line'>
+                            <div>
                                 <h5></h5>
                             </div>
                         </div></div>
@@ -91,7 +91,7 @@ export default function Business(props) {
                             <div className={isMiddleHovered ? "cross-select container-plus" : "cross-select"}>
                                 <div><a href='https://www.google.com' target='_blank' className={isMiddleHovered ? "plus" : ""}></a></div>
                             </div>
-                            <div className='qualities-left-line'>
+                            <div>
                                 <h5></h5>
                             </div>
                         </div></div>
@@ -101,7 +101,7 @@ export default function Business(props) {
                             <div className={isRightHovered ? "cross-select container-plus" : "cross-select"}>
                                 <div><a href='https://www.google.com' target='_blank' className={isRightHovered ? "plus" : ""}></a></div>
                             </div>
-                            <div className='qualities-left-line'>
+                            <div>
                                 <h5></h5>
                             </div>
                         </div></div>

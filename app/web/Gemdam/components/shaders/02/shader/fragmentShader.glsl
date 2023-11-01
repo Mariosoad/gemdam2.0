@@ -103,24 +103,24 @@ void main()
     // strength = clamp(strength, 0.0, 1.0);
 
     // // Pattern 12
-    // float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
-    // strength *= step(0.8, mod(vUv.y * 10.0, 1.0));
+        // float strength = step(0.8, mod(vUv.x * 10.0, 1.0));
+        // strength *= step(0.8, mod(vUv.y * 10.0, 1.0));
 
     // // Pattern 13
     // float strength = step(0.4, mod(vUv.x * 10.0, 1.0));
     // strength *= step(0.8, mod(vUv.y * 10.0, 1.0));
 
     // // Pattern 14
-    float barX = step(0.4, mod(vUv.x * 10.0, 1.0)) * step(0.8, mod(vUv.y * 10.0, 1.0));
-    float barY = step(0.8, mod(vUv.x * 10.0, 1.0)) * step(0.4, mod(vUv.y * 10.0, 1.0));
-    float strength = barX + barY;
-    strength = clamp(strength, 0.0, 1.0);
-
-    // // Pattern 15
-    // float barX = step(0.4, mod(vUv.x * 10.0 - 0.2, 1.0)) * step(0.8, mod(vUv.y * 10.0, 1.0));
-    // float barY = step(0.8, mod(vUv.x * 10.0, 1.0)) * step(0.4, mod(vUv.y * 10.0 - 0.2, 1.0));
+    // float barX = step(0.4, mod(vUv.x * 10.0, 1.0)) * step(0.8, mod(vUv.y * 10.0, 1.0));
+    // float barY = step(0.8, mod(vUv.x * 10.0, 1.0)) * step(0.4, mod(vUv.y * 10.0, 1.0));
     // float strength = barX + barY;
     // strength = clamp(strength, 0.0, 1.0);
+
+    // // Pattern 15
+    float barX = step(0.4, mod(vUv.x * 10.0 - 0.2, 1.0)) * step(0.8, mod(vUv.y * 10.0, 1.0));
+    float barY = step(0.8, mod(vUv.x * 10.0, 1.0)) * step(0.4, mod(vUv.y * 10.0 - 0.2, 1.0));
+    float strength = barX + barY;
+    strength = clamp(strength, 0.0, 1.0);
 
     // // Pattern 16
     // float strength = abs(vUv.x - 0.5);
@@ -159,7 +159,7 @@ void main()
      // float strength = length(vUv);
 
     // // Pattern 27
-    //float strength = distance(vUv, vec2(0.5));
+    // float strength = distance(vUv, vec2(0.5));
 
     // // Pattern 28
     // float strength = 1.0 - distance(vUv, vec2(0.5));
@@ -255,7 +255,7 @@ void main()
     // float strength = step(0.9, sin(cnoise(vUv * 1.0) * 20.0));
 
 // Color en formato hexadecimal #2cddcf
-vec3 desiredColor = vec3(44.0 / 255.0, 221.0 / 255.0, 207.0 / 255.0);
+vec3 desiredColor = vec3(0.0 / 255.0, 0.0 / 255.0, 0.0 / 255.0);
 //vec3 desiredColor = vec3(0.0);
 
 // Final color
@@ -263,7 +263,7 @@ vec3 blackColor = vec3(0.0);
 vec3 uvColor = vec3(vUv, 0.0);
 vec3 mixedColor = mix(blackColor, desiredColor, strength);
 
-gl_FragColor = vec4(mixedColor, 1.0);
+gl_FragColor = vec4(mixedColor, 0.8);
 }
 
 `

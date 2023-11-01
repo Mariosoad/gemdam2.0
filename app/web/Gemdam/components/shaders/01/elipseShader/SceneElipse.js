@@ -1,4 +1,4 @@
-import { OrbitControls, Tube } from "@react-three/drei";
+import { OrbitControls, Text3D, Tube } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import { MathUtils, TubeGeometry } from "three";
@@ -31,7 +31,7 @@ const Blob = () => {
         mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
 
         !isMobile ? (mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(mesh.current.material.uniforms.u_intensity.value,
-            hover.current ? 0.35 : 0.05,
+            hover.current ? 0.85 : 0.4,
             0.02
         )) : (mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
             mesh.current.material.uniforms.u_intensity.value,
@@ -41,16 +41,64 @@ const Blob = () => {
     });
 
     return (
-        <group>
+        <group
+            rotation-x={0.15}
+            rotation-y={0.0}
+        >
             <mesh
                 ref={mesh}
-                position={[ isMobile ? -1.5 : 0, 0, 0]}
+                position={[isMobile ? -1.5 : 0, 1, -1]}
+                rotation-y={0.78}
+                rotation-x={0.0}
+                rotation-z={0.0}
                 scale={1.5}
                 onPointerOver={() => (hover.current = true)}
                 onPointerOut={() => (hover.current = false)}
                 castShadow receiveShadow
             >
-                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.2 : 2.3, 2, 1]} />
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.2 : 2.3, 1, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={true}
+                />
+            </mesh>
+
+            <mesh
+                ref={mesh}
+                position={[isMobile ? -1.5 : 0, -0.5, 0]}
+                rotation-y={0.78}
+                rotation-x={0.0}
+                rotation-z={0.0}
+                scale={1.5}
+                onPointerOver={() => (hover.current = true)}
+                onPointerOut={() => (hover.current = false)}
+                castShadow receiveShadow
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.2 : 2.3, 1, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={true}
+                />
+            </mesh>
+
+            <mesh
+                ref={mesh}
+                position={[isMobile ? -1.5 : 0, 0, 0.5]}
+                rotation-y={0.78}
+                rotation-x={0.0}
+                rotation-z={0.0}
+                scale={1.5}
+                onPointerOver={() => (hover.current = true)}
+                onPointerOut={() => (hover.current = false)}
+                castShadow receiveShadow
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.2 : 2.3, 1, 1]} />
                 <shaderMaterial
                     color={"#2cddcf"}
                     fragmentShader={fragmentShader}
@@ -61,10 +109,60 @@ const Blob = () => {
             </mesh>
             <mesh
                 ref={mesh}
-                position={isMobile ? [1.8, 2.0, 1.4] : [2.4, 2.4, 2.4]}
-                scale={1.0}
+                position={[isMobile ? -1.5 : 0, 0.5, 1]}
+                rotation-y={0.78}
+                rotation-x={0.0}
+                rotation-z={0.0}
+                scale={1.5}
+                onPointerOver={() => (hover.current = true)}
+                onPointerOut={() => (hover.current = false)}
+                castShadow receiveShadow
             >
-                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.8, 1, 1]} />
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.2 : 2.3, 1, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={true}
+                />
+            </mesh>
+
+            <mesh
+                ref={mesh}
+                position={[isMobile ? -1.5 : 0, 1, -14]}
+                rotation-y={0.78}
+                rotation-x={0.0}
+                rotation-z={0.0}
+                scale={1.5}
+                onPointerOver={() => (hover.current = true)}
+                onPointerOut={() => (hover.current = false)}
+                castShadow receiveShadow
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.2 : 1.0, 1, 1]} />
+                <shaderMaterial
+                    color={"#2cddcf"}
+                    fragmentShader={fragmentShader}
+                    vertexShader={vertexShader}
+                    uniforms={uniforms}
+                    wireframe={false}
+                />
+            </mesh>
+
+
+
+
+
+
+            {/* <mesh
+                ref={mesh}
+                position={isMobile ? [1.8, 2.0, 1.4] : [2.4, 2.2, 2.4]}
+                scale={1.0}
+                rotation-y={0.5}
+                rotation-x={0.6}
+                rotation-z={0.2}
+            >
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.8, 1, 2]} />
                 <shaderMaterial
                     color={"#2cddcf"}
                     fragmentShader={fragmentShader}
@@ -75,10 +173,13 @@ const Blob = () => {
             </mesh>
             <mesh
                 ref={mesh}
-                position={isMobile ? [1.8, -2.0, 1.2] : [3.5, -1.5, 1.2]}
+                position={isMobile ? [1.8, -2.0, 1.2] : [3.4, -1.5, 1.2]}
                 scale={1.0}
+                rotation-y={0.1}
+                rotation-x={0.5}
+                rotation-z={0.5}
             >
-                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.8, 1, 1]} />
+                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.6, 1, 2]} />
                 <shaderMaterial
                     color={"#2cddcf"}
                     fragmentShader={fragmentShader}
@@ -86,7 +187,7 @@ const Blob = () => {
                     uniforms={uniforms}
                     wireframe={true}
                 />
-            </mesh>
+            </mesh> */}
         </group>
     );
 };

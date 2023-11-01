@@ -211,17 +211,17 @@
     }
 
     .plus:hover {
-        /* background: linear-gradient(to bottom, transparent 45%, #ffffff 40%, #ffffff 55%, transparent 55%), linear-gradient(to right, transparent 45%, #ffffff 45%, #ffffff 55%, transparent 55%); */
-        background: #ffffffc8;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
+        background: linear-gradient(to bottom, transparent 45%, #ffffff 40%, #ffffff 55%, transparent 55%), linear-gradient(to right, transparent 45%, #ffffff 45%, #ffffff 55%, transparent 55%);
+        /* background: #ffffffc8; */
+        /* border-radius: 50%; */
+        /* width: 80px;
+        height: 80px; */
         animation: fadeIn 2s;
     }
 
     @keyframes fadeIn {
         0% {
-            opacity: 0;
+            opacity: 0.2;
         }
 
         100% {
@@ -343,7 +343,7 @@
 @media (min-width: 1920px) {
 
     .container-business {
-        width: 1060px;
+        width: 1057px;
         height: 100vh;
     }
 }
