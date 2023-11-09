@@ -29,16 +29,16 @@ export default function Homepage() {
   const dataLanguage = currentLanguage === 'en' ? dataEN : dataES;
 
   return (
-    <div className='gemdamstudio '>
+    <div className='gemdamstudio'>
       <Mouse />
-      <main className="main scroll">
-        <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
+      <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
+      <main className="mains scroll">
         <Gemdam dataText={dataLanguage.gemdam} />
         <Business dataText={dataLanguage.business} />
         <Shader02 />
         <Companies dataText={dataLanguage.companies} />
         <About dataText={dataLanguage.about} />
-        <Shader03 />
+        <Shader02 />
         <Contact dataText={dataLanguage.contact} />
       </main>
     </div>

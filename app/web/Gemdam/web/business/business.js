@@ -13,7 +13,7 @@ export default function Business(props) {
     const [isRightHovered, setIsRightHovered] = useState(false);
 
     return (
-        <div className='container-business snapScroll'>
+        <div id="business" className='container-business snapScroll'>
             <div className='back-tittle'><h2>{dataBusiness.title}</h2></div>
             <div className='child-container-business'>
                 <div className='subtittle-top mark-tittle top-position'>

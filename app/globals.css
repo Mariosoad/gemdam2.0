@@ -91,6 +91,17 @@ span::selection {
   color: #000000;
 }
 
+button::selection{
+  background: #2cddcf;
+  color: #000000;
+}
+
+button{
+  background: transparent;
+  outline: none;
+  border: none !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -99,7 +110,7 @@ span::selection {
 }
 
 html {
-  scroll-behavior: smooth !important;
+  /* scroll-behavior: smooth !important; */
 }
 
 body {
@@ -120,7 +131,6 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   color: currentColor;
-
 }
 
 a {
@@ -130,18 +140,16 @@ a {
 
 .gemdamstudio {
   height: 100vh;
-
 }
 
-.main {
+.mains {
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   max-width: 100%;
   width: 100%;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   scroll-snap-type: y proximity;
 }
 
@@ -399,7 +407,7 @@ a {
   }
 
   .container-companies .lines {
-    width: 1058px;
+    width: 1060px;
     height: 100%;
   }
 
@@ -498,7 +506,7 @@ a {
   }
 
   .back-tittle {
-    font-size: 4.5em;
+    font-size: 4em;
     font-weight: 900;
     transform: rotate(-90deg);
     top: 55%;

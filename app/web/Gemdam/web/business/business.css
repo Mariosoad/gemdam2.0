@@ -216,7 +216,7 @@
         /* border-radius: 50%; */
         /* width: 80px;
         height: 80px; */
-        animation: fadeIn 2s;
+        /* animation: fadeIn 2s; */
     }
 
     @keyframes fadeIn {
@@ -343,7 +343,7 @@
 @media (min-width: 1920px) {
 
     .container-business {
-        width: 1057px;
+        width: 1060px;
         height: 100vh;
     }
 }
@@ -577,11 +577,19 @@
  * -------------------------------------------------------------------
  */
 @media (max-width: 768px) {
+    .container-business .subtittle-top {
+        display: none;
+    }
+
+    .container-qualities {
+        display: none;
+    }
+
     .container-business {
         width: 560px;
         height: auto;
         margin: auto;
-        padding: 60px 0px;
+        padding: 60px 0px 10px 0px;
     }
 
     .container-description {

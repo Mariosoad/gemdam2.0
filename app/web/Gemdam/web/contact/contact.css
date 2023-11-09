@@ -1,3 +1,10 @@
+
+
+
+.text-swap{
+    cursor: pointer !important;
+}
+
 /** 
  * (min-width: 981px)
  *  
@@ -371,7 +378,7 @@
         width: 560px;
         /* height: auto; */
         margin: auto;
-        padding: 60px 0px;
+        padding: 0px 0px 60px 0px;
     }
 
     .child-container-contact {

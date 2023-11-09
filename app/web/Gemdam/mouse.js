@@ -5,7 +5,7 @@ import './mouse.css';
 
 function Mouse() {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    console.log(cursorPosition)
+    // console.log(cursorPosition)
     useEffect(() => {
         const updateCursorPosition = (e) => {
             setCursorPosition({ x: e.clientX, y: e.clientY });

@@ -152,42 +152,6 @@ const Blob = () => {
 
 
 
-
-
-            {/* <mesh
-                ref={mesh}
-                position={isMobile ? [1.8, 2.0, 1.4] : [2.4, 2.2, 2.4]}
-                scale={1.0}
-                rotation-y={0.5}
-                rotation-x={0.6}
-                rotation-z={0.2}
-            >
-                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.8, 1, 2]} />
-                <shaderMaterial
-                    color={"#2cddcf"}
-                    fragmentShader={fragmentShader}
-                    vertexShader={vertexShader}
-                    uniforms={uniforms}
-                    wireframe={true}
-                />
-            </mesh>
-            <mesh
-                ref={mesh}
-                position={isMobile ? [1.8, -2.0, 1.2] : [3.4, -1.5, 1.2]}
-                scale={1.0}
-                rotation-y={0.1}
-                rotation-x={0.5}
-                rotation-z={0.5}
-            >
-                <tetrahedronGeometry receiveShadow args={[isMobile ? 2.3 : 0.6, 1, 2]} />
-                <shaderMaterial
-                    color={"#2cddcf"}
-                    fragmentShader={fragmentShader}
-                    vertexShader={vertexShader}
-                    uniforms={uniforms}
-                    wireframe={true}
-                />
-            </mesh> */}
         </group>
     );
 };

@@ -7,7 +7,7 @@ export default function Contact(props) {
     const dataContact = props.dataText;
 
     return (
-        <div id='Contact' className='container-contact snapScroll'>
+        <div id='contact' className='container-contact snapScroll'>
             <div className='back-tittle'><h2>{dataContact.title}</h2></div>
             <div className='child-container-contact'>
                 <div className='subtittle-top top-position mark-tittle'>

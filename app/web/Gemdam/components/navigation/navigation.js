@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from "next/image"
 
 import "./navigation.css"
-import Link from 'next/link';
 
 export default function Navigation({ onChangeLanguage, currentLanguage }) {
 
@@ -53,27 +53,27 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
         {
             id: "01",
             title: "Home",
-            href: "/",
+            href: "hero",
         },
         {
             id: "02",
             title: "Business",
-            href: "#Business",
+            href: "business",
         },
         {
             id: "03",
             title: "Clients",
-            href: "#Clients",
+            href: "clients",
         },
         {
             id: "04",
             title: "About",
-            href: "#About",
+            href: "about",
         },
         {
             id: "05",
             title: "Contact",
-            href: "#Contact",
+            href: "contact",
         },
     ]
 
@@ -81,20 +81,30 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
         const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
         onChangeLanguage(newLanguage);
     };
+    const handleClickScroll = (targetId) => {
+        const element = document.getElementById(targetId);
+        if (element) {
+            // 👇 Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className={`container-navigation ${isNavbarHidden ? 'hidden-navbar' : 'set-navbar'}`}>
             <div className="container-logo-gemdam">
                 <div className="logo-gemdam logo-swap">
                     <div className={showGem ? 'cont-logo-swap' : 'swap'}>
-                        <p className="tittle-gemdam">
-                            <Image width={45} height={45}
-                                src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
-                        </p>
-                        <p className="tittle-gemdam">
-                            <Image width={45} height={45}
-                                src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
-                            <span></span></p>
+                        <button onClick={(e) => handleClickScroll("hero")} style={{ height: '100%' }}>
+                            <p className="tittle-gemdam">
+                                <Image width={45} height={45}
+                                    src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
+                            </p>
+                            <p className="tittle-gemdam">
+                                <Image width={45} height={45}
+                                    src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
+                                <span></span>
+                            </p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -103,7 +113,7 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                 <div className="nav-container">
                     {/* MENU NAVBAR */}
                     <div className="navbar">
-                        <Link href="/#Contact"><p>CONTACT</p></Link>
+                        <button onClick={(e) => handleClickScroll("contact")}>CONTACT</button>
                         <button onClick={() => setNavOpen(!navOpen)}>MENU</button>
                         <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
                             <div className="hamBox">
@@ -127,14 +137,14 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                             <div className='links-menu'>
                                 {dataLinks.map(l => {
                                     return (
-                                        <Link key={l.href} as={l.href} href={l.href}>
+                                        <button key={l.href} onClick={(e) => (handleClickScroll(l.href), (setNavOpen(!navOpen)))}>
                                             <div className='child-link-menu'
                                                 onMouseEnter={() => setIsHovered(true)}
                                                 onMouseLeave={() => setIsHovered(false)}>
                                                 <span className='quare'>{l.id}</span>
                                                 <p>{l.title}</p>
                                             </div>
-                                        </Link>
+                                        </button>
                                     )
                                 })}
                             </div>

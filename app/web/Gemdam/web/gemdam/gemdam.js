@@ -58,7 +58,7 @@ export default function Gemdam(props) {
     const dataGemdam = props.dataText;
 
     return (
-        <div className='container-gemdam snapScroll'>
+        <div id="hero" className='container-gemdam snapScroll'>
             <div className='child-container-gemdam'>
                 <div className='container-tittle'>
                     <div className='child-container-tittle'>

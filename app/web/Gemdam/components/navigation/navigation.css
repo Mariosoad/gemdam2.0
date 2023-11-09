@@ -15,6 +15,11 @@
     user-select: none;
 }
 
+.links-menu button {
+    width: 100%;
+    text-align: left;
+}
+
 .hidden-navbar {
     opacity: 0;
     animation: fade-out .1s ease-out forwards;
