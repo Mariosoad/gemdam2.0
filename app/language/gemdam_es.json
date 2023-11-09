@@ -53,32 +53,44 @@
             {
                 "id": "01",
                 "tittle": "STIMULUS VR",
-                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+                "width": "50",
+                "height": "50",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/4098a82a-ce71-4ece-7cf0-9c26fe11f500/mobile"
             },
             {
                 "id": "02",
                 "tittle": "URUS",
-                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+                "width": "80",
+                "height": "80",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/8c0e62bf-b6f3-4d64-570d-929601fb2400/mobile"
             },
             {
                 "id": "03",
                 "tittle": "RADIOANDINA",
-                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+                "width": "60",
+                "height": "60",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/aff73bec-3816-41a8-f379-50fcdc90db00/mobile"
             },
             {
                 "id": "04",
                 "tittle": "BRIPTRAVEL",
-                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+                "width": "70",
+                "height": "70",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/f0e4cf64-a3e9-4988-ddb5-583fbb6a6c00/mobile"
             },
             {
                 "id": "05",
                 "tittle": "MAXIVIAJES",
-                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+                "width": "80",
+                "height": "80",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/8ddcd656-c923-4010-c311-7c7ff8d5ef00/mobile"
             },
             {
                 "id": "06",
                 "tittle": "RADIOFEST",
-                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/cf2ca22d-24f1-47c5-ad00-7f8f7a030100/mobile"
+                "width": "60",
+                "height": "60",
+                "url": "https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/fa222ffe-b0ce-4fe0-0f61-3e806f8c6b00/mobile"
             }
         ]
     },

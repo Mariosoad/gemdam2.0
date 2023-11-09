@@ -229,11 +229,11 @@ h4 {
         flex-direction: column;
         row-gap: 20px;
     }
-
+/* 
     .logo img {
         width: 60px;
         height: 60px;
-    }
+    } */
 
     .container-logo-img {
         height: auto;

@@ -47,7 +47,7 @@ const Blob = () => {
         >
             <mesh
                 ref={mesh}
-                position={[isMobile ? -1.5 : 0, 1, -1]}
+                position={[isMobile ? 0 : 0, 1, -1]}
                 rotation-y={0.78}
                 rotation-x={0.0}
                 rotation-z={0.0}
@@ -68,7 +68,7 @@ const Blob = () => {
 
             <mesh
                 ref={mesh}
-                position={[isMobile ? -1.5 : 0, -0.5, 0]}
+                position={[isMobile ? 0 : 0, -0.5, 0]}
                 rotation-y={0.78}
                 rotation-x={0.0}
                 rotation-z={0.0}
@@ -89,7 +89,7 @@ const Blob = () => {
 
             <mesh
                 ref={mesh}
-                position={[isMobile ? -1.5 : 0, 0, 0.5]}
+                position={[isMobile ? 0 : 0, 0, 0.5]}
                 rotation-y={0.78}
                 rotation-x={0.0}
                 rotation-z={0.0}
@@ -109,7 +109,7 @@ const Blob = () => {
             </mesh>
             <mesh
                 ref={mesh}
-                position={[isMobile ? -1.5 : 0, 0.5, 1]}
+                position={[isMobile ? 0 : 0, 0.5, 1]}
                 rotation-y={0.78}
                 rotation-x={0.0}
                 rotation-z={0.0}
@@ -130,7 +130,7 @@ const Blob = () => {
 
             <mesh
                 ref={mesh}
-                position={[isMobile ? -1.5 : 0, 1, -14]}
+                position={[isMobile ? 0 : 0, 1, -14]}
                 rotation-y={0.78}
                 rotation-x={0.0}
                 rotation-z={0.0}
