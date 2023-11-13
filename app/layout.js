@@ -1,6 +1,6 @@
 'use client'
 
-import { Lexend, Roboto } from 'next/font/google'
+import { Lexend, Roboto, Manrope } from 'next/font/google'
 import Script from 'next/script'
 
 //STYLE GLOBAL
@@ -18,6 +18,13 @@ const roboto = Roboto({
   display: 'swap',
   variable: '--font-roboto',
   weight: ['300', '500', '900']
+});
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-manrope',
+  weight: ['300', '400', '600', '800']
 });
 
 export default function RootLayout({ children }) {
@@ -42,7 +49,7 @@ export default function RootLayout({ children }) {
         <link rel="sitemap" type="application/xml" href="https://gemdam.com/sitemap.xml" />
 
       </head>
-      <body className={`${lexend.variable} ${roboto.variable}`}>
+      <body className={`${lexend.variable} ${roboto.variable} ${manrope.variable}`}>
         {children}
       </body>
     </html>

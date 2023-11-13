@@ -1,0 +1,129 @@
+.container-services {
+    width: 100%;
+    height: 100vh;
+}
+
+.child-container-services {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-images {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-acordeon {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ACOORDION STYLE */
+
+.accordion-button {
+    padding: 0px 20px !important;
+}
+
+.accordion-button p {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #757a7e;
+    position: absolute;
+    margin-top: -20px;
+    left: -80px;
+}
+
+.accordion-button h2 {
+    font-size: 3.2em;
+    font-weight: 900;
+    color: #000000;
+}
+
+/* HOVER UNDERLINE*/
+/* Slide in */
+.accordion-button h2:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#2cddcf;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.accordion-button h2:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* SWAP TEXT */
+.container-swappers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.cont-swap {
+    padding: 5px 15px;
+    border-radius: 25px;
+    border: 1px solid #d1cfcf;
+    transition: all 250ms;
+}
+
+.cont-swap:hover {
+    border: 1px solid #000000;
+    transition: all 250ms;
+}
+
+.text-swap {
+    /* width: 100% !important; */
+    height: 32px;
+    overflow: hidden;
+    /* border: unset; */
+    background-color: transparent;
+    transition: all 250ms;
+}
+
+.cont-text-swap {
+    /* width: 100% !important; */
+    height: 40px;
+    padding: 0px !important;
+    transform: translateY(0%);
+    border: none !important;
+    transition: all 150ms;
+}
+
+.cont-text-swap:hover {
+    transform: translateY(-91%);
+    transition: all 150ms;
+}
+
+.cont-text-swap p:last-child {
+    color: #000000;
+}
+
+.cont-text-swap p {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none !important;
+    color: #000000;
+    font-size: 0.9em;
+    font-weight: 600;
+}

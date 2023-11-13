@@ -37,19 +37,19 @@ span {
   font-family: var(--font-roboto) !important;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+.gemdamstudio .h1,
+.gemdamstudio .h2,
+.gemdamstudio .h3,
+.gemdamstudio .h4,
+.gemdamstudio .h5,
+.gemdamstudio .h6,
+.gemdamstudio h1,
+.gemdamstudio h2,
+.gemdamstudio h3,
+.gemdamstudio h4,
+.gemdamstudio h5,
+.gemdamstudio h6,
+.gemdamstudio p {
   margin: 0px !important;
   z-index: 2;
   position: relative;

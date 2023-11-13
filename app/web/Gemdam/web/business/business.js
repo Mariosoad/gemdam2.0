@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import Link from 'next/link';
 
 import "./business.css"
 
@@ -79,7 +80,10 @@ export default function Business(props) {
                         onMouseLeave={() => setIsLeftHovered(false)}>
                         <div className='child-qualities'>
                             <div className={isLeftHovered ? "cross-select container-plus" : "cross-select"}>
-                                <div><a href='https://www.google.com' target='_blank' className={isLeftHovered ? "plus" : ""}></a></div>
+                                <div>
+                                    <Link href='/Development' className={isLeftHovered ? "plus" : ""}></Link>
+                                    {/* <a href='https://www.google.com' target='_blank' className={isLeftHovered ? "plus" : ""}></a> */}
+                                </div>
                             </div>
                             <div>
                                 <h5></h5>

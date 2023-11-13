@@ -1,0 +1,38 @@
+/* Fonts */
+
+.development h1 {
+    font-family: var(--font-manrope) !important;
+    font-weight: bold;
+}
+
+.development h2 {
+    font-family: var(--font-manrope) !important;
+}
+
+.development h3 {
+    font-family: var(--font-manrope) !important;
+}
+
+.development h4 {
+    font-family: var(--font-manrope) !important;
+}
+
+.development h5 {
+    font-family: var(--font-manrope) !important;
+}
+
+.development p {
+    font-family: var(--font-manrope) !important;
+}
+
+.development a {
+    font-family: var(--font-manrope) !important;
+}
+
+.development button {
+    font-family: var(--font-manrope) !important;
+}
+
+.development span {
+    font-family: var(--font-manrope) !important;
+}

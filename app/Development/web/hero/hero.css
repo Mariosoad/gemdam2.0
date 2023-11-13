@@ -1,0 +1,44 @@
+.container-hero-dev {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.video-hero-dev {
+    width: 100%;
+    height: 100%;
+    margin-top: -90px;
+    position: absolute;
+}
+
+.tittle-hero-dev {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-tittle-hero {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.child-tittle-hero h1 {
+    font-size: 6em;
+    font-weight: 800;
+    line-height: 1em;
+    letter-spacing: -6px;
+}
+
+.child-tittle-hero h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1em;
+    width: 80%;
+}

@@ -8,7 +8,7 @@ import Business from './web/Gemdam/web/business/business';
 import Shader02 from './web/Gemdam/components/shaders/02/shader02';
 import Companies from './web/Gemdam/web/companies/companies';
 import About from './web/Gemdam/web/about/about';
-import Shader03 from './web/Gemdam/components/shaders/03/shader03';
+// import Shader03 from './web/Gemdam/components/shaders/03/shader03';
 import Contact from './web/Gemdam/web/contact/contact';
 
 import Mouse from './web/Gemdam/mouse';
