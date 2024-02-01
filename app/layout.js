@@ -4,6 +4,7 @@ import { Lexend, Roboto, Manrope } from 'next/font/google'
 
 //STYLE GLOBAL
 import './globals.css'
+import Script from 'next/script';
 
 const lexend = Lexend({
   subsets: ['latin'],
