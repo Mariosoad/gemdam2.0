@@ -1,7 +1,6 @@
 'use client'
 
 import { Lexend, Roboto, Manrope } from 'next/font/google'
-import Script from 'next/script'
 
 //STYLE GLOBAL
 import './globals.css'
@@ -43,10 +42,10 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="Realidad Virtual, VR, virtual reality, augmented reality, Realdad Aumentada, AR, experience, nultimedia, diseño, design, simulator, environment, desarrollo web, website, 3D, react, gaming, videojuegos, archviz, arquitectura, recorrido, software" />
         <meta name="color-scheme" content="blue" />
         <link rel="canonical" href="https://gemdam.com" />
-        <link rel="alternate" hreflang="es" href="https://gemdam.com" />
+        {/* <link rel="alternate" hreflang="es" href="https://gemdam.com" />
         <link rel="alternate" hreflang="en" href="https://gemdam.com" />
         <meta name="robots" content="index,follow" />
-        <link rel="sitemap" type="application/xml" href="https://gemdam.com/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" href="https://gemdam.com/sitemap.xml" /> */}
 
       </head>
       <body className={`${lexend.variable} ${roboto.variable} ${manrope.variable}`}>
