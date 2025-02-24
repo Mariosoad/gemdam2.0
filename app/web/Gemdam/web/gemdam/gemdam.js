@@ -64,7 +64,7 @@ export default function Gemdam(props) {
                     <div className='child-container-tittle'>
                         <ConsoleTextEffect />
                         <h1>DEVELOP</h1>
-                        <h1>MENT</h1>
+                        <h1>MENT TEST</h1>
                         <div className='container-subtittle'>
                             <div></div>
                             <p>{dataGemdam.subtitle}</p>
