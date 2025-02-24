@@ -2,8 +2,13 @@
 
 import React, { useEffect, useState } from 'react'
 import Shader01 from '../../components/shaders/01/shader01';
-
+import LogoGemdam from '../../components/models/LogoGemdam/logoGemdam';
 import "./gemdam.css"
+import { Canvas } from 'react-three-fiber';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Gemdam(props) {
 
@@ -64,7 +69,7 @@ export default function Gemdam(props) {
                     <div className='child-container-tittle'>
                         <ConsoleTextEffect />
                         <h1>DEVELOP</h1>
-                        <h1>MENT TEST</h1>
+                        <h1>MENT</h1>
                         <div className='container-subtittle'>
                             <div></div>
                             <p>{dataGemdam.subtitle}</p>
@@ -75,8 +80,13 @@ export default function Gemdam(props) {
                     <div className="line-animation"></div>
                 </div>
             </div>
-            <div className='container-shader'>
-                <Shader01 />
+            <div 
+            // ref={props.refModel} 
+            className='container-shader'>
+                {/* <Shader01 /> */}
+               <Canvas>
+                <LogoGemdam />
+               </Canvas>
             </div>
         </div>
     )
