@@ -31,7 +31,7 @@ export default function Homepage() {
   return (
     <div className='gemdamstudio'>
       <Mouse />
-      <Navigation currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
+      <Navigation dataText={dataLanguage.navigation} currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
       <main className="mains scroll">
         <Gemdam dataText={dataLanguage.gemdam} />
         <Business dataText={dataLanguage.business} />

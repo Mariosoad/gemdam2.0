@@ -1,4 +1,11 @@
 {
+    "navigation":{
+      "home": "Inicio",
+        "bussines": "Negocios",
+        "companies": "Clientes",
+        "about": "Nosotros",
+        "contact": "Contacto"
+    },
     "gemdam": {
         "title": "DESARROLLO",
         "subtitle": "DISEÑOS CON CATEGORÍA"
@@ -97,7 +104,7 @@
     "about": {
         "title": "NOSOTROS",
         "subtitle": "NUESTRA FILOSOFÍA",
-        "titleDescription": "ACERCA DE NUESTRO DREAM TEAM",
+        "titleDescription": " Acerca de nuestro dream team",
         "subtitleDescription": "QUIENES SOMOS",
         "sections": [
             {
@@ -126,7 +133,7 @@
     "contact": {
         "title": "CONTACTO",
         "subtitle": "DIRECTO A LOS NEGOCIOS",
-        "titleDescription": "CREEMOS TU PROYECTO IDEAL",
+        "titleDescription": "Creamos tu proyecto ideal",
         "subtitleDescription": "ENVIAR SOLICITUD",
         "call": [
             {
