@@ -13,6 +13,13 @@ export default function Business(props) {
     const [isMiddleHovered, setIsMiddleHovered] = useState(false);
     const [isRightHovered, setIsRightHovered] = useState(false);
 
+    const handleClickScroll = (targetId) => {
+        const element = document.getElementById(targetId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div id="business" className='container-business snapScroll'>
             <div className='back-tittle'><h2>{dataBusiness.title}</h2></div>
@@ -81,7 +88,8 @@ export default function Business(props) {
                         <div className='child-qualities'>
                             <div className={isLeftHovered ? "cross-select container-plus" : "cross-select"}>
                                 <div>
-                                    <Link href='/Development' className={isLeftHovered ? "plus" : ""}></Link>
+                                    <button className={isLeftHovered ? "plus" : ""} onClick={(e) => handleClickScroll("contact")}></button>
+                                    {/* <Link href='/Development' className={isLeftHovered ? "plus" : ""}></Link> */}
                                     {/* <a href='https://www.google.com' target='_blank' className={isLeftHovered ? "plus" : ""}></a> */}
                                 </div>
                             </div>
@@ -93,7 +101,10 @@ export default function Business(props) {
                         onMouseLeave={() => setIsMiddleHovered(false)}>
                         <div className='child-qualities'>
                             <div className={isMiddleHovered ? "cross-select container-plus" : "cross-select"}>
-                                <div><a href='https://www.google.com' target='_blank' className={isMiddleHovered ? "plus" : ""}></a></div>
+                                <div>
+                                    {/* <a href='https://www.google.com' target='_blank' className={isMiddleHovered ? "plus" : ""}></a> */}
+                                    <button className={isMiddleHovered ? "plus" : ""} onClick={(e) => handleClickScroll("contact")}></button>
+                                </div>
                             </div>
                             <div>
                                 <h5></h5>
@@ -103,7 +114,10 @@ export default function Business(props) {
                         onMouseLeave={() => setIsRightHovered(false)}>
                         <div className='child-qualities'>
                             <div className={isRightHovered ? "cross-select container-plus" : "cross-select"}>
-                                <div><a href='https://www.google.com' target='_blank' className={isRightHovered ? "plus" : ""}></a></div>
+                                <div>
+                                    {/* <a href='https://www.google.com' target='_blank' className={isRightHovered ? "plus" : ""}></a> */}
+                                    <button className={isRightHovered ? "plus" : ""} onClick={(e) => handleClickScroll("contact")}></button>
+                                </div>
                             </div>
                             <div>
                                 <h5></h5>

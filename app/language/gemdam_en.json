@@ -1,4 +1,11 @@
 {
+  "navigation":{
+    "home": "Home",
+    "bussines": "Business",
+    "companies": "Companies",
+    "about": "About",
+    "contact": "Contact"
+  },
   "gemdam": {
     "title": "DEVELOPMENT",
     "subtitle": "WORLD-CLASS DESIGNS"

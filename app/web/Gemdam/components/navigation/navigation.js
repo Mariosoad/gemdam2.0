@@ -6,8 +6,9 @@ import Image from "next/image"
 
 import "./navigation.css"
 
-export default function Navigation({ onChangeLanguage, currentLanguage }) {
+export default function Navigation({ onChangeLanguage, currentLanguage, dataText }) {
 
+    const dataNavigation = dataText;
     const [isHovered, setIsHovered] = useState(false);
     const [navOpen, setNavOpen] = useState(false);
     const [showGem, setShowGem] = useState(true);
@@ -52,27 +53,27 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
     const dataLinks = [
         {
             id: "01",
-            title: "Home",
+            title: `${dataNavigation.home}`,
             href: "hero",
         },
         {
             id: "02",
-            title: "Business",
+            title: `${dataNavigation.bussines}`,
             href: "business",
         },
         {
             id: "03",
-            title: "Clients",
+            title: `${dataNavigation.companies}`,
             href: "clients",
         },
         {
             id: "04",
-            title: "About",
+            title: `${dataNavigation.about}`,
             href: "about",
         },
         {
             id: "05",
-            title: "Contact",
+            title: `${dataNavigation.contact}`,
             href: "contact",
         },
     ]
@@ -84,7 +85,6 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
     const handleClickScroll = (targetId) => {
         const element = document.getElementById(targetId);
         if (element) {
-            // 👇 Will scroll smoothly to the top of the next section
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
@@ -113,7 +113,7 @@ export default function Navigation({ onChangeLanguage, currentLanguage }) {
                 <div className="nav-container">
                     {/* MENU NAVBAR */}
                     <div className="navbar">
-                        <button onClick={(e) => handleClickScroll("contact")}>CONTACT</button>
+                        <button style={{textTransform: 'uppercase'}} onClick={(e) => handleClickScroll("contact")}>{dataNavigation.contact}</button>
                         <button onClick={() => setNavOpen(!navOpen)}>MENU</button>
                         <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
                             <div className="hamBox">
