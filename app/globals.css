@@ -256,7 +256,7 @@ a {
 }
 
 .sep-line-short {
-  width: 15px;
+  width: 15px !important;
   height: 1px;
   background-color: #000000;
 }
@@ -412,7 +412,7 @@ a {
   }
 
   .container-about .lines {
-    width: 1059px;
+    width: 1060px;
     height: 100%;
   }
 
