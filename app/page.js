@@ -21,6 +21,7 @@ import dataES from './language/gemdam_es.json';
 import "./globals.css"
 import LogoGemdam from './web/Gemdam/components/models/LogoGemdam/logoGemdam';
 import { Canvas } from 'react-three-fiber';
+import Services from './web/Gemdam/web/services/services';
 
 
 export default function Homepage() {
@@ -77,6 +78,9 @@ export default function Homepage() {
         <Business dataText={dataLanguage.business} />
         <Shader02 />
         <Companies dataText={dataLanguage.companies} />
+        <Shader02 />
+        <Services dataText={dataLanguage.services} />
+        <Shader02 />
         <About dataText={dataLanguage.about} />
         <Shader02 />
         <Contact dataText={dataLanguage.contact} />
