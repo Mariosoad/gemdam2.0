@@ -66,7 +66,7 @@
     .service_item div{
         width: 100%;
     }
-    
+
     li::marker {
         content: "■";
         color: #2cddcf;
@@ -168,6 +168,38 @@
 
     .child-container-services {
         width: 100%;
+    }
+
+    .child_service_dot{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        flex-direction: row !important;
+        column-gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .service_item .tittle-description{
+        padding: 10px 0px 5px !important;
+    }
+
+    .services_dot{
+        margin-top: 20px;
+    }
+
+    .service_link{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        color: white;
+        transition: 200ms;
+        border: 1px solid #1d1d1d !important;
+    }
+    .service_link:hover{
+        transition: 250ms;
+        border: 1px solid #2cddcf !important;
     }
 }
 
