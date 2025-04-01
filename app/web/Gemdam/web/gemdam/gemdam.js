@@ -1,14 +1,9 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import Shader01 from '../../components/shaders/01/shader01';
-import LogoGemdam from '../../components/models/LogoGemdam/logoGemdam';
-// import gsap from 'gsap';
-import { Canvas } from '@react-three/fiber'
-import { createXRStore, IfInSessionMode, noEvents, PointerEvents, useXRAnchor, useXRInputSourceEvent, useXRInputSourceState, useXRPlanes, XR, XRDomOverlay, XRPlaneModel, XRSpace } from '@react-three/xr'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { OrbitHandles, TransformHandles } from '@react-three/handle'
-import { Mesh } from 'three';
+// import LogoGemdam from '../../components/models/LogoGemdam/logoGemdam';
+// import { Canvas } from '@react-three/fiber'
+import { createXRStore, useXRAnchor, useXRInputSourceEvent, useXRInputSourceState, useXRPlanes, XR, XRDomOverlay, XRPlaneModel, XRSpace } from '@react-three/xr'
 import "./gemdam.css"
 
 // gsap.registerPlugin(ScrollTrigger);
@@ -167,31 +162,7 @@ export default function Gemdam(props) {
                </Canvas> */}
 
                 {/* <button style={{color: 'white', fontWeight: 'bold'}} onClick={() => store.enterAR()}>Enter AR</button> */}
-                <Canvas >      
-                    <XR store={store}>
-                        {/* <RedWalls /> */}
-                        {/* <PointerEvents /> */}
-                        {/* <OrbitHandles /> */}
-                        {/* <DraggableCube /> */}
-                        {/* <Anchor /> */}
 
-                        <LogoGemdam />
-                        {/* {!bool && <LogoGemdam /> } */}
-                        
-                        {/* <ambientLight />
-                        <XRDomOverlay
-                                    style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                                >
-                                    <div
-                                    style={{ backgroundColor: bool ? 'red' : 'green', padding: '1rem 2rem' }}
-                                    onClick={() => setBool((b) => !b)}
-                                    >
-                                    {`Este es el mesh: ${meshRef.current}`}
-                                    {`Este es el isDraggingRef: ${isDraggingRef.current}`}
-                                    </div>
-                                </XRDomOverlay> */}
-                    </XR>
-                </Canvas>
             </div>
         </div>
     )

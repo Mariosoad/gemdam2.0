@@ -83,11 +83,12 @@
         padding: 10px 15px;
         color: white;
         transition: 200ms;
-        border: 1px solid #1d1d1d !important;
+        /* border: 1px solid #1d1d1d !important; */
     }
     .service_link:hover{
         transition: 250ms;
-        border: 1px solid #2cddcf !important;
+        color: #2cddcf;
+        /* border: 1px solid #2cddcf !important; */
     }
 }
 
@@ -180,6 +181,18 @@
         margin-bottom: 15px;
     }
 
+    .service_item{
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .service_item div{
+        width: 100%;
+    }
+
     .service_item .tittle-description{
         padding: 10px 0px 5px !important;
     }
@@ -214,7 +227,19 @@
         width: 560px;
         height: auto;
         margin: auto;
-        padding: 60px 0px 10px 0px;
+        padding: 80px 0px 40px 0px;
+    }
+    .container-services  .container-description {
+        margin-left: 5px;
+    }
+
+    .container-services  .container-description .number {
+        margin-left: -5px;
+    }
+
+    .container-services p,
+    h4 {
+        padding-left: 5px;
     }
 }
 

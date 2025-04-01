@@ -8,10 +8,10 @@ import Business from './web/Gemdam/web/business/business';
 import Shader02 from './web/Gemdam/components/shaders/02/shader02';
 import Companies from './web/Gemdam/web/companies/companies';
 import About from './web/Gemdam/web/about/about';
-// import Shader03 from './web/Gemdam/components/shaders/03/shader03';
 import Contact from './web/Gemdam/web/contact/contact';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Services from './web/Gemdam/web/services/services';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Mouse from './web/Gemdam/mouse';
 
@@ -19,24 +19,23 @@ import dataEN from './language/gemdam_en.json';
 import dataES from './language/gemdam_es.json';
 
 import "./globals.css"
-import LogoGemdam from './web/Gemdam/components/models/LogoGemdam/logoGemdam';
-import { Canvas } from 'react-three-fiber';
-import Services from './web/Gemdam/web/services/services';
+// import { Canvas } from 'react-three-fiber';
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Homepage() {
 
-  gsap.registerPlugin(ScrollTrigger);
+  // gsap.registerPlugin(ScrollTrigger);
   const mainRef = useRef(null);
   const sceneRef = useRef(null);
 
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [currentLanguage, setCurrentLanguage] = useState('es');
 
   const handleChangeLanguage = (language) => {
     setCurrentLanguage(language);
   };
 
-  const dataLanguage = currentLanguage === 'en' ? dataEN : dataES;
+  const dataLanguage = currentLanguage === 'es' ? dataES : dataEN;
 
   // useEffect(() => {
   //   gsap.timeline({
@@ -72,18 +71,18 @@ export default function Homepage() {
   return (
     <div className='gemdamstudio'>
       <Mouse />
-      <Navigation dataText={dataLanguage.navigation} currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />
+      {dataLanguage &&<Navigation dataText={dataLanguage.navigation} currentLanguage={currentLanguage} onChangeLanguage={handleChangeLanguage} />}
       <main ref={mainRef} className="mains scroll">
-        <Gemdam refModel={sceneRef} dataText={dataLanguage.gemdam} />
-        <Business dataText={dataLanguage.business} />
+        {dataLanguage && <Gemdam refModel={sceneRef}  dataText={dataLanguage.gemdam} />}
+        {dataLanguage && <Business dataText={dataLanguage.business} />}
         <Shader02 />
-        <Companies dataText={dataLanguage.companies} />
+        {dataLanguage && <Companies dataText={dataLanguage.companies} />}
         <Shader02 />
-        <Services dataText={dataLanguage.services} />
+        {dataLanguage && <Services dataText={dataLanguage.services} />}
         <Shader02 />
-        <About dataText={dataLanguage.about} />
+        {dataLanguage && <About dataText={dataLanguage.about} />}
         <Shader02 />
-        <Contact dataText={dataLanguage.contact} />
+        {dataLanguage && <Contact dataText={dataLanguage.contact} />}
       </main>
     </div>
   )

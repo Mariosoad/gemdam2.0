@@ -2,7 +2,7 @@
 
 h1 {
   font-family: var(--font-lexend) !important;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 h2 {
@@ -50,7 +50,7 @@ span {
 .gemdamstudio h5,
 .gemdamstudio h6,
 .gemdamstudio p {
-  margin: 0px !important;
+  /* margin: 0px !important; */
   z-index: 2;
   position: relative;
   pointer-events: none !important;
@@ -119,7 +119,7 @@ body {
   overflow-x: hidden;
   margin: auto;
   align-items: center;
-  background: #121212;
+  background: #121212 !important;
 
   /* Custom styles for your React previews here */
   -webkit-font-smoothing: auto;
@@ -534,7 +534,7 @@ a {
     line-height: 1em;
     color: #2cddcf;
     padding-bottom: 30px;
-    margin-left: -1px !important;
+    margin-left: -3px !important;
   }
 
   .tittle-description {
