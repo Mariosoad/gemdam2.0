@@ -68,11 +68,16 @@ export default function Navigation({ onChangeLanguage, currentLanguage, dataText
         },
         {
             id: "04",
+            title: `${dataNavigation.services}`,
+            href: "services",
+        },
+        {
+            id: "05",
             title: `${dataNavigation.about}`,
             href: "about",
         },
         {
-            id: "05",
+            id: "06",
             title: `${dataNavigation.contact}`,
             href: "contact",
         },

@@ -577,7 +577,7 @@
  * -------------------------------------------------------------------
  */
 @media (max-width: 768px) {
-    .container-business .subtittle-top {
+    .container-business .title-qualities {
         display: none;
     }
 
@@ -589,7 +589,7 @@
         width: 560px;
         height: auto;
         margin: auto;
-        padding: 60px 0px 10px 0px;
+        padding: 0px 0px 40px 0px;
     }
 
     .container-description {

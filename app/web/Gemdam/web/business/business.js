@@ -43,7 +43,7 @@ export default function Business(props) {
                         )
                     })}
                 </div>
-                <div className='subtittle-top mark-tittle'>
+                <div className='subtittle-top mark-tittle title-qualities'>
                     <div className='sep-line-large'></div>
                     <p>{dataBusiness.qualities.tittle}</p>
                 </div>

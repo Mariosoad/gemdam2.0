@@ -1,8 +1,9 @@
 {
     "navigation":{
-      "home": "Inicio",
+        "home": "Inicio",
         "bussines": "Negocios",
         "companies": "Clientes",
+        "services": "Servicios",
         "about": "Nosotros",
         "contact": "Contacto"
     },
@@ -12,7 +13,7 @@
     },
     "business": {
         "title": "NEGOCIOS",
-        "subtitle": "ACERCA DEL NEGOCIO",
+        "subtitle": "POTENCIANDO TU NEGOCIO",
         "titleDescription": "Ofrecemos una amplia variedad de soluciones",
         "description": [
             {
@@ -103,28 +104,28 @@
     },
     "services": {
         "title": "SERVICES",
-        "subtitle": "SOLUTIONS FOR EVERYONE",
-        "titleDescription": "Discover our base packages of solutions",
+        "subtitle": "SOLUCIONES A MEDIDA",
+        "titleDescription": "Paquetes de soluciones profesionales",
         "description": [
             {
                 "number": "01",
                 "title": "WEB",
-                "text": "Ofrecemos servicio de hosting\n Configuración de dominio\n Configuración de SEO y Analytics\n Diseño personalizado (UX/UI)\n Integración de APIs (Servicios)"
+                "text": "Ofrecemos servicio de hosting\n Configuración de dominio\n Configuración de SEO y Analytics\n Diseño personalizado (UX/UI)\n Integración de APIs"
               },
             {
                 "number": "02",
                 "title": "WEB XR",
-                "text": "Experiencia Inmersiva en WebXR\n Ambientes 3D Interactivos como recorridos virtuales y simuladores\n Compatibilidad multidispositivo (PC, móviles, visores VR)\n Animacion de elementos 3D\n Optimización de rendimiento para todos los dispositivos"
+                "text": "Todo lo del paquete Web\n Experiencia Inmersiva en WebXR\n Ambientes 3D Interactivos\n Compatibilidad multidispositivo\n Animación de elementos 3D\n Optimización de rendimiento"
             },
             {
                 "number": "03",
                 "title": "E-COMMERCE",
-                "text": "Diseño personalizado (UX/UI)\n Catálogo de productos personalizable\n Gestión de stock\n Carrito de compras\n Ofrecemos servicio de hosting\n Configuración de dominio\n Sistema de pagos y envíos integrado\n Datos y estadísticas"
+                "text": "Todo lo del paquete Web\n Catálogo de productos personalizable\n Gestión de stock\n Sistema de pagos integrado\n Sistema de envíos integrado\n Datos y estadísticas"
             },
             {
                 "number": "04",
                 "title": "CRM",
-                "text": "Almacenar datos de clientes actuales y potenciales en un solo lugar\n Automatización de tareas\n Generacion de informes basados en datos\n Gestion de ventas\n Automatizacion de campanas de marketing\n Gestion de atencion al cliente\n Conecta tu CRM con otras herramientas digitales para potenciar la gestión empresarial\n Documentacion de procesos de venta"
+                "text": "Todo lo del paquete Web\n Almacenar datos de clientes\n Automatización de tareas\n Generación de informes de datos\n Gestión de ventas\n Automatización de campañas\n Gestión de atención al cliente\n Documentación de procesos de venta"
             }
         ],
         "link": "CONTACTO"
@@ -160,7 +161,7 @@
     },
     "contact": {
         "title": "CONTACTO",
-        "subtitle": "DIRECTO A LOS NEGOCIOS",
+        "subtitle": "HAZLO REALIDAD CON NOSOTROS",
         "titleDescription": "Creamos tu proyecto ideal",
         "subtitleDescription": "ENVIAR SOLICITUD",
         "call": [
@@ -178,6 +179,6 @@
             }
         ],
         "location": "Buenos Aires, Argentina",
-        "copyright": " © 2023 Gemdam Studio"
+        "copyright": " © 2025 Gemdam Studio"
     }
 }

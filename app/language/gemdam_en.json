@@ -3,6 +3,7 @@
     "home": "Home",
     "bussines": "Business",
     "companies": "Companies",
+    "services": "Services",
     "about": "About",
     "contact": "Contact"
   },
@@ -12,7 +13,7 @@
   },
   "business": {
     "title": "BUSINESS",
-    "subtitle": "NOW ABOUT BUSINESS",
+    "subtitle": "BOOSTING YOUR BUSINESS",
     "titleDescription": "We offer a wide variety of solutions",
     "description": [
       {
@@ -109,22 +110,22 @@
         {
             "number": "01",
             "title": "WEB",
-            "text": "Ofrecemos servicio de hosting\n Configuración de dominio\n Configuración de SEO y Analytics\n Diseño personalizado (UX/UI)\n Integración de APIs"
+            "text": "Hosting service included\n Domain configuration\n SEO and analytics configuration\n Custom design UI/UX\n APIs integration"
           },
         {
             "number": "02",
             "title": "WEB XR",
-            "text": "Todo lo del paquete Web\n Experiencia Inmersiva en WebXR\n Ambientes 3D Interactivos\n Compatibilidad multidispositivo\n Animación de elementos 3D\n Optimización de rendimiento"
+            "text": "Includes all the web package\n Immersive experience in WebXR\n 3D interactive environments\n Multi device compatibility\n 3D elements animation\n Performance optimization"
         },
         {
             "number": "03",
             "title": "E-COMMERCE",
-            "text": "Todo lo del paquete Web\n Catálogo de productos personalizable\n Gestión de stock\n Ofrecemos servicio de hosting\n Configuración de dominio\n Sistema de pagos y envíos integrado\n Datos y estadísticas"
+            "text": "Includes all the web package\n Custom product catalog\n Stock management\n Payment system integrated\n Shipping system integrated\n Data and statistics"
         },
         {
             "number": "04",
             "title": "CRM",
-            "text": "Todo lo del paquete Web\n Almacenar datos de clientes\n Automatización de tareas\n Generación de informes de datos\n Gestión de ventas\n Automatización de campañas\n Gestión de atención al cliente\n Documentación de procesos de venta"
+            "text": "Includes all the web package\n Customer data storage\n Task automation\n Data report generation\n Sales management\n Campaign automation\n Customer service management\n Sales process documentation"
         }
     ],
     "link": "CONTACT"
@@ -160,7 +161,7 @@
   },
   "contact": {
     "title": "CONTACT",
-    "subtitle": "DOWN TO BUSINESS",
+    "subtitle": "LET’S MAKE IT HAPPEN",
     "titleDescription": "Lets create your ideal project",
     "subtitleDescription": "SEND A REQUEST",
     "call": [
@@ -178,6 +179,6 @@
       }
     ],
     "location": "Buenos Aires, Argentina",
-    "copyright": "© 2023 Gemdam Studio"
+    "copyright": "© 2025 Gemdam Studio"
   }
 }
