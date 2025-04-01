@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { useFrame } from "react-three-fiber";
+// import { useRef } from "react";
+// import { useFrame } from "react-three-fiber";
 import { Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import gsap from "gsap";

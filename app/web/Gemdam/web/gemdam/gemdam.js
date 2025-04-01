@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-// import LogoGemdam from '../../components/models/LogoGemdam/logoGemdam';
-// import { Canvas } from '@react-three/fiber'
+import LogoGemdam from '../../components/models/LogoGemdam/logoGemdam';
+import { Canvas } from '@react-three/fiber'
 import { createXRStore, useXRAnchor, useXRInputSourceEvent, useXRInputSourceState, useXRPlanes, XR, XRDomOverlay, XRPlaneModel, XRSpace } from '@react-three/xr'
 import "./gemdam.css"
 
@@ -129,8 +129,7 @@ export default function Gemdam(props) {
           </XRSpace>
         )
       }
-      
-
+  
     return (
         <div id="hero" className='container-gemdam snapScroll'>
             <div className='child-container-gemdam'>
@@ -157,9 +156,9 @@ export default function Gemdam(props) {
             // ref={props.refModel} 
             className='container-shader'>
                 {/* <Shader01 /> */}
-               {/* <Canvas>
+               <Canvas>
                 <LogoGemdam />
-               </Canvas> */}
+               </Canvas>
 
                 {/* <button style={{color: 'white', fontWeight: 'bold'}} onClick={() => store.enterAR()}>Enter AR</button> */}
 
