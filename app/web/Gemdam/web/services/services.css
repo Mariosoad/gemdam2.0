@@ -35,6 +35,17 @@
         height: 20%;
     }
 
+    .service_item .child-container-call{
+        height: 50px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .service_item .child-call{
+        font-size: 15px;
+        height: 16px !important;
+    }
+
     .services_dot{
         margin-left: 6px;
     }
