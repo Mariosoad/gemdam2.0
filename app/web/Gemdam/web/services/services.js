@@ -72,9 +72,9 @@ return(
                                                             ))}
                                                        </div>
                                                     </div>
-                                                    <div className='child-container-call' style={{justifyContent: 'center', alignItems: 'center'}}>
+                                                    <div className='child-container-call'>
                                                         <button className="service_link" onClick={(e) => handleClickScroll("contact")}>
-                                                        <div className='child-call' style={{height: '18px'}}>
+                                                        <div className='child-call'>
                                                                 <div className='text-swap'>
                                                                     <div className='cont-text-swap'>
                                                                         <p>{dataServices.link}</p>
@@ -84,7 +84,6 @@ return(
                                                         </div>
                                                         </button>
                                                     </div>
-                                                    {/* {dataServices.link} */}
                                                 </div>
                                             )
                                 })
