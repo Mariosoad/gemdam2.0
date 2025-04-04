@@ -1,9 +1,11 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 
 import "./business.css"
+import { useMediaQuery } from 'react-responsive';
+import VerticalSlider from '../services/verticalSlide';
 
 export default function Business(props) {
 
@@ -12,7 +14,13 @@ export default function Business(props) {
     const [isLeftHovered, setIsLeftHovered] = useState(false);
     const [isMiddleHovered, setIsMiddleHovered] = useState(false);
     const [isRightHovered, setIsRightHovered] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
+  
+    const isMobile = useMediaQuery({ query: "(max-width: 980px)" });
     const handleClickScroll = (targetId) => {
         const element = document.getElementById(targetId);
         if (element) {
@@ -29,8 +37,10 @@ export default function Business(props) {
                     <p>{dataBusiness.subtitle}</p>
                 </div>
                 <h2 className='tittle-section'>{dataBusiness.titleDescription}</h2>
-                <div className='container-description'>
-                    {dataBusiness.description.map((item, index) => {
+                <div className='container-description'> 
+                    {isClient ? (
+                        isMobile ? (<VerticalSlider component={'bussines'} dataServices={dataBusiness} />) :
+                    dataBusiness.description.map((item, index) => {
                         return (
                             <div key={index} className='description'>
                                 <div>
@@ -41,7 +51,7 @@ export default function Business(props) {
                                 </div>
                             </div>
                         )
-                    })}
+                    })): null}
                 </div>
                 <div className='subtittle-top mark-tittle title-qualities'>
                     <div className='sep-line-large'></div>

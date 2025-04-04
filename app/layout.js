@@ -31,9 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='scroll-smooth'>
       <head>
-        {/* <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
-        {/* <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> */}
+        <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js" />
 
         {/* METATAGS */}
         <link rel="icon" href="./logo-gemdam.png" />
@@ -47,6 +45,7 @@ export default function RootLayout({ children }) {
         <link rel="alternate" href="https://www.gemdam.com" />
         <meta name="robots" content="index,follow" />
         <link rel="sitemap" type="application/xml" href="https://www.gemdam.com/sitemap.xml" />
+
 
         {/* Google tag GEMDAM (gtag.js) */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-8XYCR02B4V" />

@@ -1,15 +1,49 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
-import LogoGemdam from '../../components/models/LogoGemdam/logoGemdam';
-import { Canvas } from '@react-three/fiber'
-import { createXRStore, useXRAnchor, useXRInputSourceEvent, useXRInputSourceState, useXRPlanes, XR, XRDomOverlay, XRPlaneModel, XRSpace } from '@react-three/xr'
-import "./gemdam.css"
-
-// gsap.registerPlugin(ScrollTrigger);
-const store = createXRStore()
+import React, { useEffect, useRef, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import "./gemdam.css";
 
 export default function Gemdam(props) {
+    const modelRef = useRef(null);
+    const dataGemdam = props.dataText;
+    const [isDragging, setIsDragging] = useState(false);
+    const [touchStart, setTouchStart] = useState(0);
+    const AR_THRESHOLD = 12;
+
+    useEffect(() => {
+        const modelViewer = modelRef.current;
+        if (!modelViewer) return;
+
+        const handlePointerDown = (event) => {
+            setTouchStart(event.clientX || event.touches?.[0]?.clientX);
+            setIsDragging(false);
+        };
+
+        const handlePointerMove = (event) => {
+            const currentX = event.clientX || event.touches?.[0]?.clientX;
+            if (Math.abs(currentX - touchStart) > AR_THRESHOLD) {
+                setIsDragging(true);
+            }
+        };
+
+        const handlePointerUp = () => {
+            if (!isDragging) {
+                modelViewer.activateAR();
+            }
+        };
+
+        modelViewer.addEventListener("pointerdown", handlePointerDown);
+        modelViewer.addEventListener("pointermove", handlePointerMove);
+        modelViewer.addEventListener("pointerup", handlePointerUp);
+
+        return () => {
+            modelViewer.removeEventListener("pointerdown", handlePointerDown);
+            modelViewer.removeEventListener("pointermove", handlePointerMove);
+            modelViewer.removeEventListener("pointerup", handlePointerUp);
+        };
+    }, [isDragging, touchStart]);
 
     const ConsoleTextEffect = () => {
         const words = ['AR', 'VR', 'VR', 'WEB', 'WEB'];
@@ -58,78 +92,21 @@ export default function Gemdam(props) {
             </div>
         );
     };
-    const [red, setRed] = useState(false)
-    const [bool, setBool] = useState(false)
-    const [model, setModel] = useState(false)
-    const isDraggingRef = useRef(false)
-    const meshRef = useRef(null)
-    const dataGemdam = props.dataText;
 
-    function RedWalls() {
-        const wallPlanes = useXRPlanes('wall')
-        return (
-          <>
-            {wallPlanes.map((plane) => (
-              <XRSpace space={plane.planeSpace}>
-                <XRPlaneModel plane={plane}>
-                  <meshBasicMaterial color="red" />
-                </XRPlaneModel>
-              </XRSpace>
-       ))}
-          </>
-       )
-      }
-    function DraggableCube() {
-        return (
-          <mesh
-            ref={meshRef}
-            onPointerDown={(e) => {
-              if (isDraggingRef.current) {
-                return
-       }
-              isDraggingRef.current = true
-              meshRef.position?.copy(e.point)
-       }}
-            onPointerMove={(e) => {
-              if (!isDraggingRef.current) {
-                return
-       }
-              meshRef.position?.copy(e.point)
-       }}
-            onPointerUp={(e) => (isDraggingRef.current = false)}
-          >
-            <boxGeometry />
-          </mesh>
-       )
-      }
-    function Anchor() {
-        const [anchor, requestAnchor] = useXRAnchor()
-        const controllerState = useXRInputSourceState('controller', 'right')
-        const handState = useXRInputSourceState('hand', 'right')
-        const inputSource = controllerState?.inputSource ?? handState?.inputSource
-        useXRInputSourceEvent(
-          inputSource,
-          'select',
-          async () => {
-            if (inputSource == null) {
-              return
-            }
-            requestAnchor({ relativeTo: 'space', space: inputSource.targetRaySpace })
-          },
-          [requestAnchor, inputSource],
-        )
-        if (anchor == null) {
-          return null
-        }
-        return (
-          <XRSpace space={anchor.anchorSpace}>
-            <mesh scale={0.5}>
-              <boxGeometry color={'red'} />
-            </mesh>
-          </XRSpace>
-        )
-      }
+    useEffect(() => {
+      const modelViewer = modelRef.current;
+      if (!modelViewer) return;
   
+      modelViewer.addEventListener('load', () => {
+          const materials = modelViewer.model.materials;
+  
+          materials.forEach((material) => {
+              material.pbrMetallicRoughness.setBaseColorFactor([44 / 255, 221 / 255, 207 / 255, 1]); // Color #2cddcf
+              material.wireframe = true;
+          });
+      });
+    }, []);
+
     return (
         <div id="hero" className='container-gemdam snapScroll'>
             <div className='child-container-gemdam'>
@@ -141,10 +118,7 @@ export default function Gemdam(props) {
                         <div className='container-subtittle'>
                             <div></div>
                             <p>{dataGemdam.subtitle}</p>
-
-                            <br   />
-                           
-                            <button  onClick={() => store.enterAR()}> <p>ACTIVAR AR</p></button>
+                            <br />
                         </div>
                     </div>
                 </div>
@@ -152,17 +126,26 @@ export default function Gemdam(props) {
                     <div className="line-animation"></div>
                 </div>
             </div>
-            <div 
-            // ref={props.refModel} 
-            className='container-shader'>
-                {/* <Shader01 /> */}
-               <Canvas>
-                <LogoGemdam />
-               </Canvas>
-
-                {/* <button style={{color: 'white', fontWeight: 'bold'}} onClick={() => store.enterAR()}>Enter AR</button> */}
-
+            <div className='container-shader'>
+                <model-viewer
+                  ref={modelRef}
+                  style={{ width: '100%', height: '100%' }}
+                  alt="3D Model"
+                  loading="eager"
+                  src="/Logo_Gemdam.glb"
+                  // src="/NeilArmstrong.glb"
+                  ar
+                  environment-image="/moon_1k.hdr"
+                  poster="/gemdam_loading.webp"
+                  auto-rotate
+                  shadow-intensity="1"
+                  camera-controls
+                  disable-zoom
+                  camera-orbit="0deg 90deg auto"
+                >
+                    {/* <button className='btn_active_ar' slot="ar-button"><p>👋 ACTIVATE AR</p></button> */}
+                </model-viewer>
             </div>
         </div>
-    )
+    );
 }

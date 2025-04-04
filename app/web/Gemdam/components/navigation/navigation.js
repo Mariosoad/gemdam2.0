@@ -101,11 +101,11 @@ export default function Navigation({ onChangeLanguage, currentLanguage, dataText
                     <div className={showGem ? 'cont-logo-swap' : 'swap'}>
                         <button onClick={(e) => handleClickScroll("hero")} style={{ height: '100%' }}>
                             <p className="tittle-gemdam">
-                                <Image width={45} height={45}
+                                <Image width={35} height={35}
                                     src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
                             </p>
                             <p className="tittle-gemdam">
-                                <Image width={45} height={45}
+                                <Image width={35} height={35}
                                     src="https://imagedelivery.net/Mag7Wvw4aqPxUrAH8_Tfkw/15e7ed8d-269a-4c28-45bb-26781fc1eb00/mobile" alt="Logo Gemdam Studio" />
                                 <span></span>
                             </p>

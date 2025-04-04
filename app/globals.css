@@ -196,6 +196,18 @@ a {
   background-color: #000000;
 }
 
+.btn_active_ar{
+  position: absolute !important;
+  top: -10px !important;
+  right: 0px !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1em;
+  color: #2cddcf;
+  padding-top: 10px;
+  z-index: 5 !important;
+}
+
 .tittle-section {
   width: 66%;
   font-size: 4.5em;
@@ -283,6 +295,10 @@ a {
   position: absolute;
   left: -80px;
   bottom: 67px;
+}
+
+model-viewer::part(default-ar-button) {
+  display: none;
 }
 
 /** 
