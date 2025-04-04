@@ -135,7 +135,7 @@ export default function Gemdam(props) {
                   src="/Logo_Gemdam.glb"
                   // src="/NeilArmstrong.glb"
                   ar
-                  environment-image="/moon_1k.hdr"
+                //   environment-image="/moon_1k.hdr"
                   poster="/gemdam_loading.webp"
                   auto-rotate
                   shadow-intensity="1"
