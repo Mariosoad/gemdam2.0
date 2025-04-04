@@ -128,22 +128,24 @@ export default function Gemdam(props) {
             </div>
             <div className='container-shader'>
                 <model-viewer
-                  ref={modelRef}
-                  style={{ width: '100%', height: '100%' }}
-                  alt="3D Model"
-                  loading="eager"
-                  src="/Logo_Gemdam.glb"
-                  // src="/NeilArmstrong.glb"
-                  ar
-                //   environment-image="/moon_1k.hdr"
-                  poster="/gemdam_poster_1.webp"
-                  auto-rotate
-                  shadow-intensity="1"
-                  camera-controls
-                  disable-zoom
-                  camera-orbit="0deg 90deg auto"
+                    ref={modelRef}
+                    style={{ width: '100%', height: '100%' }}
+                    ar
+                    alt="3D Model"
+                    loading="eager"
+                    src="/Logo_Gemdam.glb"
+                    poster="/gemdam_poster_1.webp"
+                    auto-rotate
+                    shadow-intensity="1"
+                    camera-controls
+                    disable-zoom
+                    camera-orbit="0deg 90deg auto"
+                    dpr="2"
+                    tone-mapping="neutral" 
+                    exposure="1.5"
+                    render-scale="2"
+                    powerPreference="high-performance"
                 >
-                    {/* <button className='btn_active_ar' slot="ar-button"><p>👋 ACTIVATE AR</p></button> */}
                 </model-viewer>
             </div>
         </div>

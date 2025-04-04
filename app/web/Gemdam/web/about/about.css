@@ -79,6 +79,7 @@ h4 {
     .child-img-team img {
         margin-left: 5px;
         filter: grayscale();
+        object-fit: cover;
     }
 
     .container-team-tittle {
@@ -237,6 +238,7 @@ h4 {
     .child-img-team img {
         margin-left: 5px;
         filter: grayscale();
+        object-fit: cover;
     }
 
     .container-team-tittle {
