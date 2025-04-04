@@ -11,7 +11,7 @@ import Navigation from './components/navigation/navigation'
 import Footer from './components/footer/footer'
 
 import "./development.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Development() {
   return (
