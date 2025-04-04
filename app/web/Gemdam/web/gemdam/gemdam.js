@@ -139,6 +139,7 @@ export default function Gemdam(props) {
                     shadow-intensity="0"
                     camera-controls
                     disable-zoom
+                    disable-tap
                     camera-orbit="0deg 90deg auto"
                     quality="medium"
                     dpr="2"
