@@ -297,10 +297,6 @@ a {
   bottom: 67px;
 }
 
-model-viewer::part(default-ar-button) {
-  display: none;
-}
-
 /** 
  * (min-width: 981px)
  *  
