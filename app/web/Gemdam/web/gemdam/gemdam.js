@@ -132,14 +132,15 @@ export default function Gemdam(props) {
                     style={{ width: '100%', height: '100%' }}
                     ar
                     alt="3D Model"
-                    loading="eager"
+                    loading="lazy"
                     src="/Logo_Gemdam.glb"
                     poster="/gemdam_poster_1.webp"
                     auto-rotate
-                    shadow-intensity="1"
+                    shadow-intensity="0"
                     camera-controls
                     disable-zoom
                     camera-orbit="0deg 90deg auto"
+                    quality="medium"
                     dpr="2"
                     tone-mapping="neutral" 
                     exposure="1.5"
