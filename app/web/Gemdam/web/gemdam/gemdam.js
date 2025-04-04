@@ -140,7 +140,10 @@ export default function Gemdam(props) {
                     camera-controls
                     disable-zoom
                     disable-tap
-                    camera-orbit="0deg 90deg auto"
+                    camera-orbit="10deg 80deg auto"    
+                    min-camera-orbit="-Infinity 80deg auto" // 🔹 Mantiene fija la rotación vertical en 90 grados
+                    max-camera-orbit="Infinity 80deg auto"  // 🔹 Restringe el eje vertical
+                    orbit-sensitivity="1" 
                     quality="medium"
                     dpr="2"
                     tone-mapping="neutral" 
