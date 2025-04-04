@@ -38,9 +38,7 @@ export default function Business(props) {
                 </div>
                 <h2 className='tittle-section'>{dataBusiness.titleDescription}</h2>
                 <div className='container-description'> 
-                    {isClient ? (
-                        isMobile ? (<VerticalSlider component={'bussines'} dataServices={dataBusiness} />) :
-                    dataBusiness.description.map((item, index) => {
+                    {dataBusiness.description.map((item, index) => {
                         return (
                             <div key={index} className='description'>
                                 <div>
@@ -51,7 +49,7 @@ export default function Business(props) {
                                 </div>
                             </div>
                         )
-                    })): null}
+                    })}
                 </div>
                 <div className='subtittle-top mark-tittle title-qualities'>
                     <div className='sep-line-large'></div>
