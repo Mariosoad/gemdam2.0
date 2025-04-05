@@ -43,6 +43,13 @@ export default function VerticalSlider(props) {
   };
 
   const currentItem = dataServices.description[index];
+  
+  const handleClickScroll = (targetId) => {
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="slider-container" 

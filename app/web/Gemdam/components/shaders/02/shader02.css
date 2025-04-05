@@ -96,11 +96,11 @@
         border-left: none;
         border-right: none;
     }
-    .container-shader02 div div {
+    /* .container-shader02 div div {
         filter: invert(64%) sepia(48%) saturate(559%) hue-rotate(126deg) brightness(101%) contrast(103%);
         z-index: 2;
         position: relative;
-    }
+    } */
 }
 
 /** 
