@@ -224,7 +224,7 @@
     }
     .service_link:hover{
         transition: 250ms;
-        border: 1px solid #2cddcf !important;
+        color: #2cddcf;
     }
 }
 
