@@ -12,18 +12,6 @@ export default function Gemdam(props) {
     const [touchStart, setTouchStart] = useState(0);
     const AR_THRESHOLD = 12;
 
-    const [showOverlay, setShowOverlay] = useState(false);
-
-    const handleARClick = () => {
-      setShowOverlay(true);
-  
-      setTimeout(() => {
-        setShowOverlay(false);
-        if (modelRef.current) {
-          modelRef.current.activateAR();
-        }
-      }, 3000); // muestra el cartel 3 segundos antes de entrar en AR
-    }
     useEffect(() => {
         const modelViewer = modelRef.current;
         if (!modelViewer) return;
@@ -42,7 +30,6 @@ export default function Gemdam(props) {
 
         const handlePointerUp = () => {
             if (!isDragging) {
-                handleARClick()
                 modelViewer.activateAR();
             }
         };
@@ -165,29 +152,10 @@ export default function Gemdam(props) {
                     render-scale="2"
                     powerPreference="high-performance"
                 >
+                    <button slot="ar-button" style={{opacity: 0, pointerEvents: 'none'}}>
+                        👋 Activate AR
+                    </button>
                 </model-viewer>
-                    {/* Instrucciones */}
-                          {showOverlay && (
-                            <div
-                            style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%',
-                                background: 'rgba(0,0,0,0.75)',
-                                color: 'white',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                padding: '20px',
-                                textAlign: 'center',
-                                zIndex: 1000,
-                            }}
-                            >
-                            📱 Usa dos dedos para rotar, mover y cambiar el tamaño del modelo 3D cuando estés en AR.
-                            </div>
-                        )}
             </div>
         </div>
     );
