@@ -1,9 +1,9 @@
   model-viewer {
     --progress-bar-color: transparent;
   }
-  
+
   model-viewer::part(ar-button) {
-    display: none;
+    display: none !important;
   }
 
 /** 

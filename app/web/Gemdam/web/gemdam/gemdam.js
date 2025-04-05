@@ -131,6 +131,7 @@ export default function Gemdam(props) {
                     ref={modelRef}
                     style={{ width: '100%', height: '100%' }}
                     ar
+                    ar-modes="scene-viewer webxr quick-look"
                     alt="3D Model"
                     loading="lazy"
                     src="/Logo_Gemdam.glb"
