@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 // import { Canvas } from '@react-three/fiber';
 // import { OrbitControls, useGLTF } from '@react-three/drei';
 import "./gemdam.css";
@@ -9,9 +10,10 @@ import Image from 'next/image';
 export default function Gemdam(props) {
     const modelRef = useRef(null);
     const dataGemdam = props.dataText;
-    const [isDragging, setIsDragging] = useState(false);
-    const [touchStart, setTouchStart] = useState(0);
-    const AR_THRESHOLD = 12;
+    const isMobile = useMediaQuery({ query: "(max-width: 980px)" });
+    // const [isDragging, setIsDragging] = useState(false);
+    // const [touchStart, setTouchStart] = useState(0);
+    // const AR_THRESHOLD = 12;
 
     // useEffect(() => {
     //     const modelViewer = modelRef.current;
@@ -151,7 +153,7 @@ export default function Gemdam(props) {
                     quality="low"
                     dpr="1"
                     tone-mapping="neutral" 
-                    exposure="0.2" // 🔹 Ajusta la exposición del modelo
+                    exposure={isMobile ? "0.2" : "1"} // 🔹 Ajusta la exposición del modelo
                     // render-scale="0.25"
                     powerPreference="high-performance"
                 >
