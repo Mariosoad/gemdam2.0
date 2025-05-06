@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+// import { Canvas } from '@react-three/fiber';
+// import { OrbitControls, useGLTF } from '@react-three/drei';
 import "./gemdam.css";
 
 export default function Gemdam(props) {
@@ -145,11 +145,11 @@ export default function Gemdam(props) {
                     min-camera-orbit="-Infinity 80deg auto" // 🔹 Mantiene fija la rotación vertical en 90 grados
                     max-camera-orbit="Infinity 80deg auto"  // 🔹 Restringe el eje vertical
                     orbit-sensitivity="1" 
-                    quality="medium"
+                    quality="low"
                     dpr="2"
                     tone-mapping="neutral" 
                     exposure="1.5"
-                    render-scale="2"
+                    render-scale="0.25"
                     powerPreference="high-performance"
                 >
                     <button slot="ar-button" style={{opacity: 0, pointerEvents: 'none'}}>
