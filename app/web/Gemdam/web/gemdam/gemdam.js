@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 // import { Canvas } from '@react-three/fiber';
 // import { OrbitControls, useGLTF } from '@react-three/drei';
 import "./gemdam.css";
+import Image from 'next/image';
 
 export default function Gemdam(props) {
     const modelRef = useRef(null);
@@ -12,38 +13,38 @@ export default function Gemdam(props) {
     const [touchStart, setTouchStart] = useState(0);
     const AR_THRESHOLD = 12;
 
-    useEffect(() => {
-        const modelViewer = modelRef.current;
-        if (!modelViewer) return;
+    // useEffect(() => {
+    //     const modelViewer = modelRef.current;
+    //     if (!modelViewer) return;
 
-        const handlePointerDown = (event) => {
-            setTouchStart(event.clientX || event.touches?.[0]?.clientX);
-            setIsDragging(false);
-        };
+    //     const handlePointerDown = (event) => {
+    //         setTouchStart(event.clientX || event.touches?.[0]?.clientX);
+    //         setIsDragging(false);
+    //     };
 
-        const handlePointerMove = (event) => {
-            const currentX = event.clientX || event.touches?.[0]?.clientX;
-            if (Math.abs(currentX - touchStart) > AR_THRESHOLD) {
-                setIsDragging(true);
-            }
-        };
+    //     const handlePointerMove = (event) => {
+    //         const currentX = event.clientX || event.touches?.[0]?.clientX;
+    //         if (Math.abs(currentX - touchStart) > AR_THRESHOLD) {
+    //             setIsDragging(true);
+    //         }
+    //     };
 
-        const handlePointerUp = () => {
-            if (!isDragging) {
-                modelViewer.activateAR();
-            }
-        };
+    //     const handlePointerUp = () => {
+    //         if (!isDragging) {
+    //             modelViewer.activateAR();
+    //         }
+    //     };
 
-        modelViewer.addEventListener("pointerdown", handlePointerDown);
-        modelViewer.addEventListener("pointermove", handlePointerMove);
-        modelViewer.addEventListener("pointerup", handlePointerUp);
+    //     modelViewer.addEventListener("pointerdown", handlePointerDown);
+    //     modelViewer.addEventListener("pointermove", handlePointerMove);
+    //     modelViewer.addEventListener("pointerup", handlePointerUp);
 
-        return () => {
-            modelViewer.removeEventListener("pointerdown", handlePointerDown);
-            modelViewer.removeEventListener("pointermove", handlePointerMove);
-            modelViewer.removeEventListener("pointerup", handlePointerUp);
-        };
-    }, [isDragging, touchStart]);
+    //     return () => {
+    //         modelViewer.removeEventListener("pointerdown", handlePointerDown);
+    //         modelViewer.removeEventListener("pointermove", handlePointerMove);
+    //         modelViewer.removeEventListener("pointerup", handlePointerUp);
+    //     };
+    // }, [isDragging, touchStart]);
 
     const ConsoleTextEffect = () => {
         const words = ['AR', 'VR', 'VR', 'WEB', 'WEB'];
@@ -132,6 +133,8 @@ export default function Gemdam(props) {
                     style={{ width: '100%', height: '100%' }}
                     ar
                     ar-modes="scene-viewer webxr quick-look"
+                    ar-scale="fixed"
+                    scale="0.05 0.05 0.05"
                     alt="3D Model"
                     loading="lazy"
                     src="/Logo_Gemdam.glb"
@@ -146,14 +149,21 @@ export default function Gemdam(props) {
                     max-camera-orbit="Infinity 80deg auto"  // 🔹 Restringe el eje vertical
                     orbit-sensitivity="1" 
                     quality="low"
-                    dpr="2"
+                    dpr="1"
                     tone-mapping="neutral" 
-                    exposure="1.5"
-                    render-scale="0.25"
+                    exposure="0.2" // 🔹 Ajusta la exposición del modelo
+                    // render-scale="0.25"
                     powerPreference="high-performance"
                 >
-                    <button slot="ar-button" style={{opacity: 0, pointerEvents: 'none'}}>
+                    {/* <button slot="ar-button">
                         👋 Activate AR
+                    </button> */}
+                      <div id="ar-prompt">
+                        <Image width={100} height={100} src="/hand.png" />
+                    </div>
+
+                    <button id="ar-failure">
+                        AR is not tracking!
                     </button>
                 </model-viewer>
             </div>
