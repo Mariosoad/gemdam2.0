@@ -1,8 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import { vertexShader, fragmentShader } from "./shader/shaders";
 
-import vertexShader from "./shader/vertexShader.glsl";
-import fragmentShader from "./shader/fragmentShader.glsl";
 
 const MovingPlane = () => {
   const mesh = useRef();
