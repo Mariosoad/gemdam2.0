@@ -19,13 +19,10 @@ function Mouse() {
     }, []);
 
     return (
-            <div
-                className="circle"
-                style={{
+            <div className="circle" style={{
                     left: cursorPosition.x + 'px',
                     top: cursorPosition.y + 'px',
-                }}
-            ></div>
+                }} ></div>
     );
 }
 

@@ -31,7 +31,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='scroll-smooth'>
       <head>
-        <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js" />
+        <Script
+          type="module"
+          src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
 
         {/* METATAGS */}
         <link rel="icon" href="./logo-gemdam.png" />
@@ -41,7 +46,6 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="Realidad Virtual, VR, virtual reality, augmented reality, Realdad Aumentada, AR, experience, nultimedia, diseño, design, simulator, environment, desarrollo web, website, 3D, react, gaming, videojuegos, archviz, arquitectura, recorrido, software" />
         <meta name="color-scheme" content="blue" />
         <link rel="canonical" href="https://www.gemdam.com" />
-        <link rel="alternate" href="https://www.gemdam.com" />
         <link rel="alternate" href="https://www.gemdam.com" />
         <meta name="robots" content="index,follow" />
         <link rel="sitemap" type="application/xml" href="https://www.gemdam.com/sitemap.xml" />

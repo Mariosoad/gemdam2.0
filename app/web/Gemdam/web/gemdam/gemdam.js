@@ -2,51 +2,13 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-// import { Canvas } from '@react-three/fiber';
-// import { OrbitControls, useGLTF } from '@react-three/drei';
-import "./gemdam.css";
 import Image from 'next/image';
+import "./gemdam.css";
 
 export default function Gemdam(props) {
     const modelRef = useRef(null);
     const dataGemdam = props.dataText;
     const isMobile = useMediaQuery({ query: "(max-width: 980px)" });
-    // const [isDragging, setIsDragging] = useState(false);
-    // const [touchStart, setTouchStart] = useState(0);
-    // const AR_THRESHOLD = 12;
-
-    // useEffect(() => {
-    //     const modelViewer = modelRef.current;
-    //     if (!modelViewer) return;
-
-    //     const handlePointerDown = (event) => {
-    //         setTouchStart(event.clientX || event.touches?.[0]?.clientX);
-    //         setIsDragging(false);
-    //     };
-
-    //     const handlePointerMove = (event) => {
-    //         const currentX = event.clientX || event.touches?.[0]?.clientX;
-    //         if (Math.abs(currentX - touchStart) > AR_THRESHOLD) {
-    //             setIsDragging(true);
-    //         }
-    //     };
-
-    //     const handlePointerUp = () => {
-    //         if (!isDragging) {
-    //             modelViewer.activateAR();
-    //         }
-    //     };
-
-    //     modelViewer.addEventListener("pointerdown", handlePointerDown);
-    //     modelViewer.addEventListener("pointermove", handlePointerMove);
-    //     modelViewer.addEventListener("pointerup", handlePointerUp);
-
-    //     return () => {
-    //         modelViewer.removeEventListener("pointerdown", handlePointerDown);
-    //         modelViewer.removeEventListener("pointermove", handlePointerMove);
-    //         modelViewer.removeEventListener("pointerup", handlePointerUp);
-    //     };
-    // }, [isDragging, touchStart]);
 
     const ConsoleTextEffect = () => {
         const words = ['AR', 'VR', 'VR', 'WEB', 'WEB'];
@@ -153,7 +115,7 @@ export default function Gemdam(props) {
                     quality="low"
                     dpr="1"
                     tone-mapping="neutral" 
-                    exposure={isMobile ? "0.2" : "1"} // 🔹 Ajusta la exposición del modelo
+                    exposure={isMobile ? "0.2" : "0.7"} // 🔹 Ajusta la exposición del modelo
                     // render-scale="0.25"
                     powerPreference="high-performance"
                 >
@@ -161,7 +123,7 @@ export default function Gemdam(props) {
                         👋 Activate AR
                     </button> */}
                       <div id="ar-prompt">
-                        <Image width={100} height={100} src="/hand.png" />
+                        <Image width={100} height={100} src="/hand.png" alt='hand-ar'/>
                     </div>
 
                     <button id="ar-failure">
